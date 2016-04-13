@@ -47,7 +47,7 @@
         
         CGRect rectDis = [self.photo_des boundingRectWithSize:CGSizeMake(kWindowW - 10 - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil];
     
-        return _height + rectDis.size.height  + 322;
+        return _height + rectDis.size.height  + 172 + kWindowW;
     }
     return _height;
 }

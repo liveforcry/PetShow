@@ -18,8 +18,11 @@
 @property(nonatomic,strong)NSArray *PhotoArr;
 //图片几张
 @property(nonatomic,assign)NSInteger PhtotCount;
-//赞的用户数组
-@property(nonatomic,strong)NSMutableArray *ZanUserArr;
+//赞了用户数组
+@property(nonatomic,strong)NSArray *PhotoZanArr;
+//赞了用户几张
+@property(nonatomic,assign)NSInteger PhtotZanCount;
+
 //用户的头像url
 -(NSURL *)getUsersUrlForRow : (NSInteger)row;
 //用户的标题

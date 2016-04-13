@@ -17,12 +17,6 @@
     [self getDataFromNetCompleteHandle:completionHandle];
    
 }
-- (NSMutableArray *)ZanUserArr {
-    if(_ZanUserArr == nil) {
-        _ZanUserArr = [[NSMutableArray alloc] init];
-    }
-    return _ZanUserArr;
-}
 //得到数据
 -(void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle{
  
@@ -72,6 +66,8 @@
 
 -(BOOL)isOnePhotoForRow :(NSInteger)row{
      _PhtotCount = [self getDataListForRow:row].photo.count;
+    _PhotoZanArr = [self getDataListForRow:row].zan_list;
+    _PhtotZanCount = _PhotoZanArr.count;
     _height = [self getDataListForRow:row].height;
     if (_PhtotCount == 1) {
         return YES;
@@ -91,7 +87,7 @@
      return  [self getDataListForRow:row].zan;
 }
 -(NSString *)getCommentNumForRow :(NSInteger)row{
-    [self.ZanUserArr addObjectsFromArray:[self getDataListForRow:row].zan_list];
+//    [self.ZanUserArr addObjectsFromArray:[self getDataListForRow:row].zan_list];
    return  [self getDataListForRow:row].plnum;
 }
 @end

@@ -62,32 +62,19 @@ kRemoveCellSeparator
     SuggestTwoTableViewCell *cell2 = nil;
     NSInteger row = indexPath.section;
     
-    if ([self.PetVM isOnePhotoForRow:indexPath.section]) {  //一张图片就加载cell1
+    if ([self.PetVM isOnePhotoForRow:row]) {  //一张图片就加载cell1
        cell1 = [tableView dequeueReusableCellWithIdentifier:cell1Id forIndexPath:indexPath];
-        [cell1.userPhotoImg setImageWithURL:[self.PetVM getUsersUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-        cell1.userNameLb.text = [self.PetVM getUserTitleForRow:row];
-        cell1.userAddressLb.text = [self.PetVM getUserAddressForRow:row];
-        [cell1.userLevelImg setImageWithURL:[self.PetVM getUserLevelForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-        [cell1.petPhotoImg setImageWithURL:[self.PetVM getPetPhotoUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-        cell1.petDescLb.text = [self.PetVM getDecriptionForRow:row];
-        cell1.likeNumLb.text = [self.PetVM getLikeNumForRow:row];
-        cell1.commNumLb.text = [self.PetVM getCommentNumForRow:row];
-        //给了赞 用户数组 赋值
-        
+
+        [cell1 dealWithData :self.PetVM row:row];
+       
         return cell1;
     }else{        //不是一张图片就加载cell2
         
         cell2 = [tableView dequeueReusableCellWithIdentifier:cell2Id forIndexPath:indexPath];
-        cell2.phtot = self.PetVM.PhotoArr;
-        [cell2.userPhotoImg setImageWithURL:[self.PetVM getUsersUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-        cell2.userNameLb.text = [self.PetVM getUserTitleForRow:row];
-        cell2.userAddressLb.text = [self.PetVM getUserAddressForRow:row];
-        [cell2.userLevelImg setImageWithURL:[self.PetVM getUserLevelForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-       cell2.petDescLb.text = [self.PetVM getDecriptionForRow:row];
-        cell2.likeNumLb.text = [self.PetVM getLikeNumForRow:row];
-        cell2.commNumLb.text = [self.PetVM getCommentNumForRow:row];
         
-        return cell2;
+        [cell2 dealWithData :self.PetVM row:row];
+        
+       return cell2;
     }
     
    
@@ -97,7 +84,7 @@ kRemoveCellSeparator
    if ([self.PetVM isOnePhotoForRow:indexPath.section]) {
        return self.PetVM.height;
    }else{
-       return self.PetVM.height - 60;
+       return self.PetVM.height + 131 - kWindowW;
    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -106,7 +93,9 @@ kRemoveCellSeparator
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 5;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

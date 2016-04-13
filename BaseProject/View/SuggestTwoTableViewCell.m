@@ -7,7 +7,7 @@
 //
 
 #import "SuggestTwoTableViewCell.h"
-#import "AllPetNewsModel.h"
+
 
 @interface SuggestTwoTableViewCell ()<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
@@ -40,9 +40,18 @@
 - (void)setPhtot:(NSArray *)phtot
 {
     _phtot = phtot;
-//    self.PetCollectinView.delegate = self;
-//    self.PetCollectinView.dataSource = self;
     [self.PetCollectinView reloadData];
+}
+-(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row{
+    self.phtot = PetVM.PhotoArr;
+    self.phtotZan = PetVM.PhotoZanArr;
+    [self.userPhotoImg setImageWithURL:[PetVM getUsersUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    self.userNameLb.text = [PetVM getUserTitleForRow:row];
+    self.userAddressLb.text = [PetVM getUserAddressForRow:row];
+    [self.userLevelImg setImageWithURL:[PetVM getUserLevelForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    self.petDescLb.text = [PetVM getDecriptionForRow:row];
+    self.likeNumLb.text = [PetVM getLikeNumForRow:row];
+    self.commNumLb.text = [PetVM getCommentNumForRow:row];
 }
 #pragma mark <UICollectionViewDataSource>
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -50,7 +59,57 @@
     return self.phtot.count;
     
 }
+- (DataListZan_List *)getDataForRow: (NSInteger)row{
+    return _phtotZan[row];
+}
+-(NSURL *)getZanPhotoUrlForRow :(NSInteger) row{
+    return [NSURL URLWithString:[self getDataForRow:row].avatar];
+}
+-(void)setPhtotZan:(NSArray *)phtotZan{
+    _phtotZan = phtotZan;
+    _ZanNumber = phtotZan.count;
+    [self addImageInZanView];
+}
+-(void)addImageInZanView{
+     NSInteger count = kWindowW / (36 + 10);
+    UIView *lastView = nil;
+    UIImageView *imageView = nil;
+   _ZanNumber = _ZanNumber - count ? count -1 : _ZanNumber;
+    if (_ZanNumber) {
+        for (int i  = 0; i < _ZanNumber; i++) {
+            if (i == 0) {
+                lastView = _userZanImg;
+                [_userZanImg setImageWithURL:[self getZanPhotoUrlForRow:i]placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+            }else{
+                imageView = [[UIImageView alloc]init];
+                imageView.layer.cornerRadius = 18;
+                imageView.clipsToBounds = YES;
+                [self.userZanView addSubview:imageView];
+                [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.width.height.mas_equalTo(36);
+                    make.left.mas_equalTo(lastView.mas_right).mas_equalTo(8);
+                    make.centerY.mas_equalTo(_userZanView);
+                }];
+                [imageView setImageWithURL:[self getZanPhotoUrlForRow:i]placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+                lastView = imageView;
+            }
+        }
+        UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navigationbar_more"]];
+        [self.userZanView addSubview:image];
+        [image mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.mas_equalTo(36);
+            make.right.mas_equalTo(_userZanView.mas_right).mas_equalTo(-2);
+            make.centerY.mas_equalTo(_userZanView);
+        }];
+        lastView = nil;
+    }
+}
 
+-(UIImageView *)userZanImg{
+    _userZanImg.layer.cornerRadius = 18;
+    _userZanImg.clipsToBounds = YES;
+    return _userZanImg;
+}
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collCell" forIndexPath:indexPath];

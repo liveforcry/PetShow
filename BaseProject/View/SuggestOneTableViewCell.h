@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AllPetNewsModel.h"
+#import "AllPetsNewsViewModel.h"
 @interface SuggestOneTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *PetPhotoConstraint;
-
 @property (weak, nonatomic) IBOutlet UIImageView *userPhotoImg;
-
+@property(nonatomic,assign)NSInteger ZanNumber;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLb;
 @property (weak, nonatomic) IBOutlet UILabel *userAddressLb;
 
@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIView *userZanView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *userZanIma;
-
+@property(nonatomic,strong)NSArray *phtotZan;
+-(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row;
 @end
