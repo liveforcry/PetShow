@@ -12,7 +12,6 @@
 		3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804CE4C1BD758F10046C8C8 /* NSObject+Common.m */; };
 		3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804CE4E1BD758F10046C8C8 /* NSString+PJR.m */; };
 		3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804CE501BD758F10046C8C8 /* NSString+QRCode.m */; };
-		3835CFB71BD90E150024CA48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3835CFB61BD90E150024CA48 /* ViewController.m */; };
 		3879FE811BDFA8E100A99990 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3879FE801BDFA8E100A99990 /* libsqlite3.0.tbd */; };
 		3885C8981BE8E88D009441EA /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3885C8971BE8E88D009441EA /* iCarousel.m */; };
 		3885C89D1BE8E8E8009441EA /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3885C89A1BE8E8E8009441EA /* libMobClickLibrary.a */; };
@@ -66,6 +65,12 @@
 		3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */; };
 		3886C0C11BD74B090014E661 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0C01BD74B090014E661 /* BaseModel.m */; };
 		7E1643BF1CAE265D0053E6E0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1643BD1CAE265D0053E6E0 /* UIColor+Extension.m */; };
+		7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */; };
+		7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */; };
+		7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */; };
+		7EB093201CB526D900E5612E /* AllNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0931F1CB526D900E5612E /* AllNetManager.m */; };
+		7EC64A471CB52900007FF093 /* AllPetNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC64A461CB52900007FF093 /* AllPetNewsModel.m */; };
+		7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,8 +82,6 @@
 		3804CE4E1BD758F10046C8C8 /* NSString+PJR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJR.m"; sourceTree = "<group>"; };
 		3804CE4F1BD758F10046C8C8 /* NSString+QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QRCode.h"; sourceTree = "<group>"; };
 		3804CE501BD758F10046C8C8 /* NSString+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRCode.m"; sourceTree = "<group>"; };
-		3835CFB51BD90E150024CA48 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3835CFB61BD90E150024CA48 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3879FE801BDFA8E100A99990 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3879FE9D1BDFDD2400A99990 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		3885C8961BE8E88D009441EA /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -165,6 +168,18 @@
 		5EAAD623A23724C816F8DC02 /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1643BD1CAE265D0053E6E0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		7E1643BE1CAE265D0053E6E0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		7E3EAE261CBCDC19000D2194 /* SuggestOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuggestOneTableViewCell.h; path = ../../../petShow/BaseProject/View/SuggestOneTableViewCell.h; sourceTree = "<group>"; };
+		7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuggestOneTableViewCell.m; path = ../../../petShow/BaseProject/View/SuggestOneTableViewCell.m; sourceTree = "<group>"; };
+		7E3EAE2C1CBCDC68000D2194 /* SuggestTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuggestTwoTableViewCell.h; path = ../../../petShow/BaseProject/View/SuggestTwoTableViewCell.h; sourceTree = "<group>"; };
+		7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuggestTwoTableViewCell.m; path = ../../../petShow/BaseProject/View/SuggestTwoTableViewCell.m; sourceTree = "<group>"; };
+		7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetSuggestController.h; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.h; sourceTree = "<group>"; };
+		7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetSuggestController.m; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.m; sourceTree = "<group>"; };
+		7EB0931E1CB526D900E5612E /* AllNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllNetManager.h; path = ../../../petShow/BaseProject/NetManager/AllNetManager.h; sourceTree = "<group>"; };
+		7EB0931F1CB526D900E5612E /* AllNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllNetManager.m; path = ../../../petShow/BaseProject/NetManager/AllNetManager.m; sourceTree = "<group>"; };
+		7EC64A451CB52900007FF093 /* AllPetNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetNewsModel.h; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.h; sourceTree = "<group>"; };
+		7EC64A461CB52900007FF093 /* AllPetNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllPetNewsModel.m; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.m; sourceTree = "<group>"; };
+		7ED5A1761CB5FBE90072EE32 /* AllPetsNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetsNewsViewModel.h; path = ../../../petShow/BaseProject/ViewModel/AllPetsNewsViewModel.h; sourceTree = "<group>"; };
+		7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllPetsNewsViewModel.m; path = ../../../petShow/BaseProject/ViewModel/AllPetsNewsViewModel.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,7 +369,7 @@
 		3886C08A1BD748830014E661 = {
 			isa = PBXGroup;
 			children = (
-				3886C0951BD748830014E661 /* PetShow */,
+				3886C0951BD748830014E661 /* petShow */,
 				3886C0941BD748830014E661 /* Products */,
 				DEB62B47C560AA65E07ECFA4 /* Pods */,
 				FA3445AEA3874C1D4FE61EAF /* Frameworks */,
@@ -369,7 +384,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3886C0951BD748830014E661 /* PetShow */ = {
+		3886C0951BD748830014E661 /* petShow */ = {
 			isa = PBXGroup;
 			children = (
 				3886C0AF1BD74A4A0014E661 /* Define */,
@@ -385,9 +400,10 @@
 				3886C09A1BD748830014E661 /* AppDelegate.m */,
 				3886C0961BD748830014E661 /* Supporting Files */,
 			);
-			name = PetShow;
+			name = petShow;
 			path = BaseProject;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		3886C0961BD748830014E661 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -411,6 +427,9 @@
 			children = (
 				3886C0BF1BD74B090014E661 /* BaseModel.h */,
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
+				7EB093171CB522DE00E5612E /* homeModel */,
+				7EB093191CB5232E00E5612E /* squareModel */,
+				7EB0931A1CB5233C00E5612E /* MeModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +439,9 @@
 			children = (
 				3886C0BC1BD74AFE0014E661 /* BaseNetManager.h */,
 				3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */,
+				7EB0931B1CB525ED00E5612E /* homeNetManager */,
+				7EB0931C1CB5260700E5612E /* squateNetManager */,
+				7EB0931D1CB5261C00E5612E /* MeNetManager */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -457,6 +479,10 @@
 		3886C0B51BD74A4A0014E661 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E3EAE261CBCDC19000D2194 /* SuggestOneTableViewCell.h */,
+				7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */,
+				7E3EAE2C1CBCDC68000D2194 /* SuggestTwoTableViewCell.h */,
+				7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,8 +490,8 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3835CFB51BD90E150024CA48 /* ViewController.h */,
-				3835CFB61BD90E150024CA48 /* ViewController.m */,
+				7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */,
+				7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -475,8 +501,64 @@
 			children = (
 				3886C0B91BD74AE90014E661 /* BaseViewModel.h */,
 				3886C0BA1BD74AE90014E661 /* BaseViewModel.m */,
+				7ED5A1751CB5FA450072EE32 /* homeViewModel */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7EB093171CB522DE00E5612E /* homeModel */ = {
+			isa = PBXGroup;
+			children = (
+				7EC64A451CB52900007FF093 /* AllPetNewsModel.h */,
+				7EC64A461CB52900007FF093 /* AllPetNewsModel.m */,
+			);
+			name = homeModel;
+			sourceTree = "<group>";
+		};
+		7EB093191CB5232E00E5612E /* squareModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = squareModel;
+			sourceTree = "<group>";
+		};
+		7EB0931A1CB5233C00E5612E /* MeModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MeModel;
+			sourceTree = "<group>";
+		};
+		7EB0931B1CB525ED00E5612E /* homeNetManager */ = {
+			isa = PBXGroup;
+			children = (
+				7EB0931E1CB526D900E5612E /* AllNetManager.h */,
+				7EB0931F1CB526D900E5612E /* AllNetManager.m */,
+			);
+			name = homeNetManager;
+			sourceTree = "<group>";
+		};
+		7EB0931C1CB5260700E5612E /* squateNetManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = squateNetManager;
+			sourceTree = "<group>";
+		};
+		7EB0931D1CB5261C00E5612E /* MeNetManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MeNetManager;
+			sourceTree = "<group>";
+		};
+		7ED5A1751CB5FA450072EE32 /* homeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7ED5A1761CB5FBE90072EE32 /* AllPetsNewsViewModel.h */,
+				7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */,
+			);
+			name = homeViewModel;
 			sourceTree = "<group>";
 		};
 		DEB62B47C560AA65E07ECFA4 /* Pods */ = {
@@ -535,14 +617,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Tarena;
+				ORGANIZATIONNAME = shenyi;
 				TargetAttributes = {
 					3886C0921BD748830014E661 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
-			buildConfigurationList = 3886C08E1BD748830014E661 /* Build configuration list for PBXProject "PetShow" */;
+			buildConfigurationList = 3886C08E1BD748830014E661 /* Build configuration list for PBXProject "petShow" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -660,12 +742,17 @@
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				7E1643BF1CAE265D0053E6E0 /* UIColor+Extension.m in Sources */,
-				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
+				7EB093201CB526D900E5612E /* AllNetManager.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
+				7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */,
+				7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
+				7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
+				7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
+				7EC64A471CB52900007FF093 /* AllPetNewsModel.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +821,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "淘淘宠物";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -770,6 +858,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "淘淘宠物";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -780,6 +869,8 @@
 			baseConfigurationReference = 4329DABFE5AD654FE71597C9 /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BaseProject/Vendor/umeng_ios_social_sdk_4.2-2.5_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -805,6 +896,8 @@
 			baseConfigurationReference = DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BaseProject/Vendor/umeng_ios_social_sdk_4.2-2.5_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -828,7 +921,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3886C08E1BD748830014E661 /* Build configuration list for PBXProject "PetShow" */ = {
+		3886C08E1BD748830014E661 /* Build configuration list for PBXProject "petShow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3886C0A81BD748830014E661 /* Debug */,

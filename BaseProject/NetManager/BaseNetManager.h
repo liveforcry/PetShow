@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kCompletionHandle completionHandle:(void(^)(id model, NSError *error))completionHandle
+#define kComplete complete:(void(^)(id model, NSError *error))complete
 
 @interface BaseNetManager : NSObject
 

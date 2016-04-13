@@ -17,7 +17,7 @@
                BlueprintIdentifier = "3886C0921BD748830014E661"
                BuildableName = "PetShow.app"
                BlueprintName = "PetShow"
-               ReferencedContainer = "container:PetShow.xcodeproj">
+               ReferencedContainer = "container:petShow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "3886C0921BD748830014E661"
             BuildableName = "PetShow.app"
             BlueprintName = "PetShow"
-            ReferencedContainer = "container:PetShow.xcodeproj">
+            ReferencedContainer = "container:petShow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "3886C0921BD748830014E661"
             BuildableName = "PetShow.app"
             BlueprintName = "PetShow"
-            ReferencedContainer = "container:PetShow.xcodeproj">
+            ReferencedContainer = "container:petShow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "3886C0921BD748830014E661"
             BuildableName = "PetShow.app"
             BlueprintName = "PetShow"
-            ReferencedContainer = "container:PetShow.xcodeproj">
+            ReferencedContainer = "container:petShow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
