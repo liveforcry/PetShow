@@ -7,7 +7,7 @@
 //
 
 #import "SuggestOneTableViewCell.h"
-
+#import "PetSuggestZanController.h"
 @implementation SuggestOneTableViewCell
 
 - (void)awakeFromNib {
@@ -40,7 +40,9 @@
     NSInteger count = kWindowW / (36 + 10);
     UIView *lastView = nil;
     UIImageView *imageView = nil;
-    _ZanNumber = _ZanNumber - count ? count -1 : _ZanNumber;
+    if (_ZanNumber >= count ) {
+        _ZanNumber = count - 1;
+    }
     if (_ZanNumber) {
         for (int i  = 0; i < _ZanNumber; i++) {
             if (i == 0) {
@@ -70,6 +72,12 @@
         lastView = nil;
     }
 }
+- (IBAction)GotoSuggestDetail:(id)sender {
+    PetSuggestZanController *zanVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ZanVc"];
+    zanVc.ZanDataArr = self.phtotZan;
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

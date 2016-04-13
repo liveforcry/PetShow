@@ -75,6 +75,7 @@
     UIView *lastView = nil;
     UIImageView *imageView = nil;
    _ZanNumber = _ZanNumber - count ? count -1 : _ZanNumber;
+    
     if (_ZanNumber) {
         for (int i  = 0; i < _ZanNumber; i++) {
             if (i == 0) {

@@ -69,6 +69,8 @@
 		7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */; };
 		7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */; };
 		7EB093201CB526D900E5612E /* AllNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0931F1CB526D900E5612E /* AllNetManager.m */; };
+		7EC1BA251CBE173200C51A6F /* PetSuggestZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */; };
+		7EC1BA281CBE1B6700C51A6F /* ZanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1BA271CBE1B6700C51A6F /* ZanCell.m */; };
 		7EC64A471CB52900007FF093 /* AllPetNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC64A461CB52900007FF093 /* AllPetNewsModel.m */; };
 		7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */; };
 /* End PBXBuildFile section */
@@ -176,6 +178,10 @@
 		7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetSuggestController.m; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.m; sourceTree = "<group>"; };
 		7EB0931E1CB526D900E5612E /* AllNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllNetManager.h; path = ../../../petShow/BaseProject/NetManager/AllNetManager.h; sourceTree = "<group>"; };
 		7EB0931F1CB526D900E5612E /* AllNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllNetManager.m; path = ../../../petShow/BaseProject/NetManager/AllNetManager.m; sourceTree = "<group>"; };
+		7EC1BA231CBE173200C51A6F /* PetSuggestZanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetSuggestZanController.h; path = ../../../petShow/BaseProject/ViewController/PetSuggestZanController.h; sourceTree = "<group>"; };
+		7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetSuggestZanController.m; path = ../../../petShow/BaseProject/ViewController/PetSuggestZanController.m; sourceTree = "<group>"; };
+		7EC1BA261CBE1B6700C51A6F /* ZanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZanCell.h; path = ../../../petShow/BaseProject/View/ZanCell.h; sourceTree = "<group>"; };
+		7EC1BA271CBE1B6700C51A6F /* ZanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZanCell.m; path = ../../../petShow/BaseProject/View/ZanCell.m; sourceTree = "<group>"; };
 		7EC64A451CB52900007FF093 /* AllPetNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetNewsModel.h; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.h; sourceTree = "<group>"; };
 		7EC64A461CB52900007FF093 /* AllPetNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllPetNewsModel.m; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.m; sourceTree = "<group>"; };
 		7ED5A1761CB5FBE90072EE32 /* AllPetsNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetsNewsViewModel.h; path = ../../../petShow/BaseProject/ViewModel/AllPetsNewsViewModel.h; sourceTree = "<group>"; };
@@ -479,6 +485,8 @@
 		3886C0B51BD74A4A0014E661 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7EC1BA261CBE1B6700C51A6F /* ZanCell.h */,
+				7EC1BA271CBE1B6700C51A6F /* ZanCell.m */,
 				7E3EAE261CBCDC19000D2194 /* SuggestOneTableViewCell.h */,
 				7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */,
 				7E3EAE2C1CBCDC68000D2194 /* SuggestTwoTableViewCell.h */,
@@ -492,6 +500,8 @@
 			children = (
 				7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */,
 				7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */,
+				7EC1BA231CBE173200C51A6F /* PetSuggestZanController.h */,
+				7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -748,12 +758,14 @@
 				7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */,
+				7EC1BA251CBE173200C51A6F /* PetSuggestZanController.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
 				7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				7EC64A471CB52900007FF093 /* AllPetNewsModel.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
+				7EC1BA281CBE1B6700C51A6F /* ZanCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
