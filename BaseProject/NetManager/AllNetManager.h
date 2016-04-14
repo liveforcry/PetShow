@@ -13,4 +13,7 @@
 //获取所有宠物的信息  
 +(id)getAllPetsNewsWithPageId :(NSInteger )pageId kComplete;
 
+
+//获取所有宠物的图片
++(id)getAllPetsPicWithPageId :(NSInteger )pageId kComplete;
 @end

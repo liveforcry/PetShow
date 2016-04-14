@@ -42,6 +42,9 @@
 #import <BlocksKit+UIKit.h>
 /* --------------------------- */
 
+#import "BTLAllHttpTool.h"
+#import "BTLHttpTool.h"
+
 
 
 #import <MJRefresh.h>    //优秀的滚动视图头部和脚步刷新效果
@@ -60,7 +63,8 @@ static const int ddLogLevel = DDLogLevelError;
 #endif
 
 #import <CocoaAsyncSocket.h>  //第三方socket通讯类库， 对系统CFNetwork类库进行了封装
-
+#import "MJPhotoBrowser.h"
+#import "MJPhoto.h"
 
 #import <MBProgressHUD.h>       //实现安卓toast风格提示，弹出提示框架
 

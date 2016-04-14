@@ -8,6 +8,9 @@
 
 #import "SuggestOneTableViewCell.h"
 #import "PetSuggestZanController.h"
+@interface SuggestOneTableViewCell()
+@property(nonatomic,strong)NSURL *PhtotURL;
+@end
 @implementation SuggestOneTableViewCell
 
 - (void)awakeFromNib {
@@ -22,7 +25,11 @@
     self.userNameLb.text = [PetVM getUserTitleForRow:row];
     self.userAddressLb.text = [PetVM getUserAddressForRow:row];
     [self.userLevelImg setImageWithURL:[PetVM getUserLevelForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    
+    _PhtotURL = [PetVM getPetPhotoUrlForRow:row];
+    
     [self.petPhotoImg setImageWithURL:[PetVM getPetPhotoUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    
     self.petDescLb.text = [PetVM getDecriptionForRow:row];
     self.likeNumLb.text = [PetVM getLikeNumForRow:row];
     self.commNumLb.text = [PetVM getCommentNumForRow:row];
@@ -94,8 +101,26 @@
 
     return _userPhotoImg;
 }
+-(void)tap: (UIGestureRecognizer *)gesture{
+
+    NSMutableArray *array = [NSMutableArray array];
+
+    MJPhoto *photo = [[MJPhoto alloc]init];
+    photo.url  = _PhtotURL;
+    photo.srcImageView = _petPhotoImg;
+    photo.index = 1  ;
+    [array addObject:photo];
+    MJPhotoBrowser *broswer = [[MJPhotoBrowser alloc]init];
+    broswer.photos = array;
+    broswer.currentPhotoIndex = 0;
+    [broswer show];
+    
+}
+
 - (UIImageView *)petPhotoImg{
-//    
+    _petPhotoImg.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [_petPhotoImg addGestureRecognizer:gesture];
     _petPhotoImg.contentMode = 2;
     _petPhotoImg.clipsToBounds = YES;
     return _petPhotoImg;

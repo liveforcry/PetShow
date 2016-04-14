@@ -22,17 +22,10 @@
 //    flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
 //    flowLayout.minimumLineSpacing = 0;
 //    flowLayout.minimumInteritemSpacing = 0;
-    
-    
 //    [_PetCollectinView setCollectionViewLayout:flowLayout];
    
 }
--(instancetype)init{
-    if (self = [super init]) {
-        
-    }
-    return self;
-}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -40,6 +33,7 @@
 - (void)setPhtot:(NSArray *)phtot
 {
     _phtot = phtot;
+
     [self.PetCollectinView reloadData];
 }
 -(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row{
@@ -56,8 +50,11 @@
 #pragma mark <UICollectionViewDataSource>
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return self.phtot.count;
+    return 1;
     
+}
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+     return self.phtot.count;
 }
 - (DataListZan_List *)getDataForRow: (NSInteger)row{
     return _phtotZan[row];
@@ -68,14 +65,16 @@
 -(void)setPhtotZan:(NSArray *)phtotZan{
     _phtotZan = phtotZan;
     _ZanNumber = phtotZan.count;
+    
     [self addImageInZanView];
 }
 -(void)addImageInZanView{
      NSInteger count = kWindowW / (36 + 10);
     UIView *lastView = nil;
     UIImageView *imageView = nil;
-   _ZanNumber = _ZanNumber - count ? count -1 : _ZanNumber;
-    
+    if (_ZanNumber >= count ) {
+        _ZanNumber = count - 1;
+    }
     if (_ZanNumber) {
         for (int i  = 0; i < _ZanNumber; i++) {
             if (i == 0) {
@@ -115,11 +114,33 @@
 
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collCell" forIndexPath:indexPath];
     UIImageView *image = (UIImageView *)[cell viewWithTag:100];
-
-    DataListPhoto *phtot =  self.phtot[indexPath.row];
+    image.tag = indexPath.section;
+    image.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [image addGestureRecognizer:gesture];
+    DataListPhoto *phtot =  self.phtot[indexPath.section];
     [image  setImageWithURL: [NSURL URLWithString:phtot.url] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
     
     return cell;
+}
+-(void)tap : (UIGestureRecognizer *)gesture{
+        UIImageView *image = (UIImageView *)gesture.view;
+        NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < self.phtot.count; i++) {
+            MJPhoto *photo = [[MJPhoto alloc]init];
+            DataListPhoto *phtotUrl =  self.phtot[i];
+            photo.url = [NSURL URLWithString:phtotUrl.url];
+            photo.srcImageView = image;
+            photo.index = i  ;
+        
+            [array addObject:photo];
+        
+        }
+
+        MJPhotoBrowser *broswer = [[MJPhotoBrowser alloc]init];
+        broswer.photos = array;
+        broswer.currentPhotoIndex = image.tag;
+        [broswer show];
 }
 - (UICollectionView *)PetCollectinView{
     _PetCollectinView.userInteractionEnabled = YES;
@@ -136,7 +157,7 @@
 //四周边距
 
 -(UIEdgeInsets )collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(2, 5, 2, 5);
+    return UIEdgeInsetsMake(0, 5, 0, 5);
 }
 //行间距
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
@@ -149,7 +170,7 @@
 //每个Cell的大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    return CGSizeMake(135, 131);
+    return CGSizeMake(131, 128);
 }
 
 @end
