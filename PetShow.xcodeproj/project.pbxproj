@@ -130,8 +130,10 @@
 		7E54D3EE1CBE7F520044F545 /* BTLVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3AE1CBE7F520044F545 /* BTLVersion.m */; };
 		7E54D3EF1CBE7F520044F545 /* BTLAllHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3B11CBE7F520044F545 /* BTLAllHttpTool.m */; };
 		7E54D3F01CBE7F520044F545 /* BTLHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3B31CBE7F520044F545 /* BTLHttpTool.m */; };
-		7E54D3F31CBE897C0044F545 /* PetPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3F21CBE897C0044F545 /* PetPicModel.m */; };
 		7E54D3F61CBE8ADD0044F545 /* PetPicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3F51CBE8ADD0044F545 /* PetPicViewModel.m */; };
+		7E9596431CBF3806005B46B3 /* PetPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596421CBF3806005B46B3 /* PetPicController.m */; };
+		7E9596461CBF395F005B46B3 /* petPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596451CBF395F005B46B3 /* petPicCell.m */; };
+		7E9596491CBF6CBB005B46B3 /* PetPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596481CBF6CBB005B46B3 /* PetPicModel.m */; };
 		7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */; };
 		7EB093201CB526D900E5612E /* AllNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0931F1CB526D900E5612E /* AllNetManager.m */; };
 		7EC1BA251CBE173200C51A6F /* PetSuggestZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */; };
@@ -374,10 +376,14 @@
 		7E54D3B11CBE7F520044F545 /* BTLAllHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLAllHttpTool.m; sourceTree = "<group>"; };
 		7E54D3B21CBE7F520044F545 /* BTLHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLHttpTool.h; sourceTree = "<group>"; };
 		7E54D3B31CBE7F520044F545 /* BTLHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLHttpTool.m; sourceTree = "<group>"; };
-		7E54D3F11CBE897C0044F545 /* PetPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetPicModel.h; path = ../../../petShow/BaseProject/Model/PetPicModel.h; sourceTree = "<group>"; };
-		7E54D3F21CBE897C0044F545 /* PetPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetPicModel.m; path = ../../../petShow/BaseProject/Model/PetPicModel.m; sourceTree = "<group>"; };
 		7E54D3F41CBE8ADD0044F545 /* PetPicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetPicViewModel.h; path = ../../../petShow/BaseProject/ViewModel/PetPicViewModel.h; sourceTree = "<group>"; };
 		7E54D3F51CBE8ADD0044F545 /* PetPicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetPicViewModel.m; path = ../../../petShow/BaseProject/ViewModel/PetPicViewModel.m; sourceTree = "<group>"; };
+		7E9596411CBF3806005B46B3 /* PetPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetPicController.h; path = ../../../petShow/BaseProject/ViewController/PetPicController.h; sourceTree = "<group>"; };
+		7E9596421CBF3806005B46B3 /* PetPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetPicController.m; path = ../../../petShow/BaseProject/ViewController/PetPicController.m; sourceTree = "<group>"; };
+		7E9596441CBF395F005B46B3 /* petPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = petPicCell.h; path = ../../../petShow/BaseProject/View/petPicCell.h; sourceTree = "<group>"; };
+		7E9596451CBF395F005B46B3 /* petPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = petPicCell.m; path = ../../../petShow/BaseProject/View/petPicCell.m; sourceTree = "<group>"; };
+		7E9596471CBF6CBB005B46B3 /* PetPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetPicModel.h; path = ../../../petShow/BaseProject/Model/PetPicModel.h; sourceTree = "<group>"; };
+		7E9596481CBF6CBB005B46B3 /* PetPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetPicModel.m; path = ../../../petShow/BaseProject/Model/PetPicModel.m; sourceTree = "<group>"; };
 		7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetSuggestController.h; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.h; sourceTree = "<group>"; };
 		7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetSuggestController.m; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.m; sourceTree = "<group>"; };
 		7EB0931E1CB526D900E5612E /* AllNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllNetManager.h; path = ../../../petShow/BaseProject/NetManager/AllNetManager.h; sourceTree = "<group>"; };
@@ -717,6 +723,8 @@
 				7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */,
 				7E3EAE2C1CBCDC68000D2194 /* SuggestTwoTableViewCell.h */,
 				7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */,
+				7E9596441CBF395F005B46B3 /* petPicCell.h */,
+				7E9596451CBF395F005B46B3 /* petPicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -728,6 +736,8 @@
 				7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */,
 				7EC1BA231CBE173200C51A6F /* PetSuggestZanController.h */,
 				7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */,
+				7E9596411CBF3806005B46B3 /* PetPicController.h */,
+				7E9596421CBF3806005B46B3 /* PetPicController.m */,
 				7E54D31C1CBE75400044F545 /* TestViewController.h */,
 				7E54D31D1CBE75400044F545 /* TestViewController.m */,
 			);
@@ -1096,8 +1106,8 @@
 			children = (
 				7EC64A451CB52900007FF093 /* AllPetNewsModel.h */,
 				7EC64A461CB52900007FF093 /* AllPetNewsModel.m */,
-				7E54D3F11CBE897C0044F545 /* PetPicModel.h */,
-				7E54D3F21CBE897C0044F545 /* PetPicModel.m */,
+				7E9596471CBF6CBB005B46B3 /* PetPicModel.h */,
+				7E9596481CBF6CBB005B46B3 /* PetPicModel.m */,
 			);
 			name = homeModel;
 			sourceTree = "<group>";
@@ -1351,6 +1361,7 @@
 				7E54D3BD1CBE7F520044F545 /* BTLHelpMeMakingOfferData.m in Sources */,
 				7E54D3EA1CBE7F520044F545 /* WXPaySDKData.m in Sources */,
 				7E54D3E21CBE7F520044F545 /* UpDataShopInfo.m in Sources */,
+				7E9596491CBF6CBB005B46B3 /* PetPicModel.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				7E54D3D61CBE7F520044F545 /* BTLShopCarData.m in Sources */,
 				7E54D3B91CBE7F520044F545 /* BTLBuildOrderInfo.m in Sources */,
@@ -1378,6 +1389,7 @@
 				7E54D3D01CBE7F520044F545 /* BTLReturnPwd.m in Sources */,
 				7E54D3C51CBE7F520044F545 /* BTLOrderListData.m in Sources */,
 				7E54D3D51CBE7F520044F545 /* BTLPirmeInfo.m in Sources */,
+				7E9596461CBF395F005B46B3 /* petPicCell.m in Sources */,
 				7E54D3B51CBE7F520044F545 /* BalancePayData.m in Sources */,
 				7E54D3D31CBE7F520044F545 /* BTLItem.m in Sources */,
 				7E54D3D91CBE7F520044F545 /* deleteInfo.m in Sources */,
@@ -1402,7 +1414,6 @@
 				7E54D3DF1CBE7F520044F545 /* ShopMoneyData.m in Sources */,
 				7E54D3C21CBE7F520044F545 /* BTLMineOrder.m in Sources */,
 				7E54D3D11CBE7F520044F545 /* BTLCommitData.m in Sources */,
-				7E54D3F31CBE897C0044F545 /* PetPicModel.m in Sources */,
 				7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */,
 				7EC1BA3D1CBE269B00C51A6F /* MJPhotoProgressView.m in Sources */,
 				7E54D3C71CBE7F520044F545 /* BTLOrderData.m in Sources */,
@@ -1432,6 +1443,7 @@
 				7E54D3C01CBE7F520044F545 /* BTLIssueInquiry.m in Sources */,
 				7E54D3B61CBE7F520044F545 /* BalancePayInfo.m in Sources */,
 				7E54D3ED1CBE7F520044F545 /* BTLRegister.m in Sources */,
+				7E9596431CBF3806005B46B3 /* PetPicController.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				7E54D3DE1CBE7F520044F545 /* ReturnFreightInfo.m in Sources */,
 				7E54D3CC1CBE7F520044F545 /* PayResult.m in Sources */,

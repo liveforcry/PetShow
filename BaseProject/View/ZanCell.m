@@ -8,6 +8,7 @@
 
 #import "ZanCell.h"
 
+
 @implementation ZanCell
 
 - (void)awakeFromNib {

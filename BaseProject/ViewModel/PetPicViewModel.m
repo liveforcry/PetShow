@@ -12,7 +12,7 @@
 @implementation PetPicViewModel
 //刷新数据
 - (void)refreshDataCompletionHandle:(CompletionHandle)completionHandle{
-    _pageId = 1;
+    _pageId = 0;
     [self getDataFromNetCompleteHandle:completionHandle];
     
 }
@@ -20,33 +20,42 @@
 -(void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle{
     
     [AllNetManager getAllPetsPicWithPageId:_pageId complete:^(PetPicModel *model, NSError *error) {
-        if (self.pageId == 1) {
+        if (self.pageId == 0) {
             [self.dataArr removeAllObjects];
             self.dataArr = nil;
         }
-        
-        self.dataArr = [NSMutableArray arrayWithArray:model.post_list];
+        [self.dataArr addObjectsFromArray:model.attachment.follows];
        
         completionHandle(error);
     }];
 }
 //加载更多
 -(void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle{
-    _pageId = 2;
+    _pageId += 30;
     [self getDataFromNetCompleteHandle:completionHandle];
     
 }
+-(NSInteger)rowNumber{
+    return self.dataArr.count;
+}
 //获取每一行的数据
--(Post_List *)getDataListForRow :(NSInteger)row{
+-(Follows *)getDataListForRow :(NSInteger)row{
     return self.dataArr[row];
     
 }
-//用户的头像url
 -(NSURL *)getUsersUrlForRow : (NSInteger)row{
-    return [NSURL URLWithString:[self getDataListForRow:row].user.pic];
+    return [NSURL URLWithString:[self getDataListForRow:row].headFace];
 }
-//宠物的头像url
--(NSURL *)getPetPicUrlForRow : (NSInteger)row{
-    return [NSURL URLWithString:[self getDataListForRow:row].pic];
+//用户的名称
+-(NSString *)getUserNickForRow : (NSInteger)row{
+    return [self getDataListForRow:row].nick;
+}
+//用户的积分
+-(NSString *)getUsersScoreForRow : (NSInteger)row{
+    return [NSString stringWithFormat:@"[self getDataListForRow:row].nick :%ld",[self getDataListForRow:row].score];
+}
+//用户的等级
+-(NSString *)getUserLeveForRow : (NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",[self getDataListForRow:row].level];
 }
 @end

@@ -2,7 +2,7 @@
 //  PetPicModel.m
 //  petShow
 //
-//  Created by baturu on 16/4/13.
+//  Created by baturu on 16/4/14.
 //  Copyright © 2016年 shenyi. All rights reserved.
 //
 
@@ -10,22 +10,17 @@
 
 @implementation PetPicModel
 
+@end
+@implementation Attachment
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"post_list" : [Post_List class]};
+    return @{@"follows" : [Follows class]};
 }
-@end
-@implementation Post_List
 
 @end
 
 
-@implementation Pet
-
-@end
-
-
-@implementation User
+@implementation Follows
 
 @end
 

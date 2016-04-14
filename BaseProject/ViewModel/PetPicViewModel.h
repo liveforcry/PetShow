@@ -14,6 +14,11 @@
 @property(nonatomic,assign)NSInteger rowNumber;
 //用户的头像url
 -(NSURL *)getUsersUrlForRow : (NSInteger)row;
-//用户的头像url
--(NSURL *)getPetPicUrlForRow : (NSInteger)row;
+//用户的名称
+-(NSString *)getUserNickForRow : (NSInteger)row;
+//用户的积分
+-(NSString *)getUsersScoreForRow : (NSInteger)row;
+//用户的等级
+-(NSString * )getUserLeveForRow : (NSInteger)row;
+
 @end

@@ -2,57 +2,81 @@
 //  PetPicModel.h
 //  petShow
 //
-//  Created by baturu on 16/4/13.
+//  Created by baturu on 16/4/14.
 //  Copyright © 2016年 shenyi. All rights reserved.
 //
 
 #import "BaseModel.h"
 
-@class Post_List,Pet,User;
+@class Attachment,Follows;
 @interface PetPicModel : BaseModel
 
-@property (nonatomic, strong) NSArray<Post_List *> *post_list;
+@property (nonatomic, assign) NSInteger status;
 
-@property (nonatomic, assign) NSInteger response_status;
+@property (nonatomic, copy) NSString *message;
+
+@property (nonatomic, copy) NSString *debug;
+
+@property (nonatomic, strong) Attachment *attachment;
 
 @end
-@interface Post_List : NSObject
+@interface Attachment : NSObject
 
-@property (nonatomic, assign) CGFloat last_newpost_update_time;
+@property (nonatomic, strong) NSArray<Follows *> *follows;
 
-@property (nonatomic, copy) NSString *pic;
+@property (nonatomic, assign) NSInteger count;
 
-@property (nonatomic, assign) NSInteger hot;
+@property (nonatomic, assign) NSInteger myRank;
 
-@property (nonatomic, copy) NSString *last_newpost_id;
+@end
 
-@property (nonatomic, copy) NSString *post_id;
+@interface Follows : NSObject
 
-@property (nonatomic, copy) NSString *last_newpost_url;
+@property (nonatomic, assign) NSInteger rank;
 
-@property (nonatomic, copy) NSString *_id;
+@property (nonatomic, copy) NSString *headFace;
 
-@property (nonatomic, assign) NSInteger species;
+@property (nonatomic, assign) NSInteger userflower;
 
-@property (nonatomic, strong) Pet *pet;
+@property (nonatomic, assign) NSInteger rcode;
 
-@property (nonatomic, assign) CGFloat create_time;
+@property (nonatomic, assign) NSInteger eachOther;
+
+@property (nonatomic, copy) NSString *level1;
+
+@property (nonatomic, assign) NSInteger userpopularity;
+
+@property (nonatomic, assign) NSInteger followed;
+
+@property (nonatomic, assign) NSInteger score;
+
+@property (nonatomic, copy) NSString *sign;
 
 @property (nonatomic, assign) NSInteger gender;
 
-@property (nonatomic, strong) User *user;
+@property (nonatomic, copy) NSString *level0;
 
-@end
+@property (nonatomic, assign) NSInteger userxpurchase;
 
-@interface Pet : NSObject
+@property (nonatomic, assign) NSInteger followedMe;
 
-@property (nonatomic, copy) NSString *pet_id;
+@property (nonatomic, assign) NSInteger level;
 
-@end
+@property (nonatomic, assign) NSInteger head;
 
-@interface User : NSObject
+@property (nonatomic, assign) NSInteger userscore;
 
-@property (nonatomic, copy) NSString *pic;
+@property (nonatomic, assign) NSInteger uid;
+
+@property (nonatomic, copy) NSString *level2;
+
+@property (nonatomic, copy) NSString *nick;
+
+@property (nonatomic, assign) NSInteger vip;
+
+@property (nonatomic, assign) NSInteger vlevel;
+
+@property (nonatomic, copy) NSString *astar;
 
 @end
 
