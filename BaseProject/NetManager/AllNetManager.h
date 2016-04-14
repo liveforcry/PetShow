@@ -16,4 +16,7 @@
 
 //获取所有宠物的图片
 +(id)getAllPetsPicWithPageId :(NSInteger )pageId kComplete;
+
+//获取所有宠物的频道
++(id)getAllPetsChannelWithPageId :(NSInteger )pageId kComplete;
 @end

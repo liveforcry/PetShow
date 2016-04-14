@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
-    self.tabBar.tintColor = [UIColor redColor];
+    self.tabBar.tintColor = YCColor(247, 76, 83);
     
 
 //    self.tabBarItem.title = title;

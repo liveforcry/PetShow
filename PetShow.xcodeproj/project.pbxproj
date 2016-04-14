@@ -134,6 +134,12 @@
 		7E9596431CBF3806005B46B3 /* PetPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596421CBF3806005B46B3 /* PetPicController.m */; };
 		7E9596461CBF395F005B46B3 /* petPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596451CBF395F005B46B3 /* petPicCell.m */; };
 		7E9596491CBF6CBB005B46B3 /* PetPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596481CBF6CBB005B46B3 /* PetPicModel.m */; };
+		7E95964F1CBF8BEE005B46B3 /* PetChannelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E95964E1CBF8BEE005B46B3 /* PetChannelViewModel.m */; };
+		7E9596521CBF90DB005B46B3 /* PetChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596511CBF90DB005B46B3 /* PetChannelController.m */; };
+		7E9596551CBF9904005B46B3 /* PetChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596541CBF9904005B46B3 /* PetChannelCell.m */; };
+		7E95965B1CBF9DFF005B46B3 /* PetChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E95965A1CBF9DFF005B46B3 /* PetChannelModel.m */; };
+		7E95965F1CBFA11E005B46B3 /* ScrollDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E95965E1CBFA11E005B46B3 /* ScrollDisplayViewController.m */; };
+		7E9596621CBFA14E005B46B3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9596611CBFA14E005B46B3 /* HomeViewController.m */; };
 		7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */; };
 		7EB093201CB526D900E5612E /* AllNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0931F1CB526D900E5612E /* AllNetManager.m */; };
 		7EC1BA251CBE173200C51A6F /* PetSuggestZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */; };
@@ -384,6 +390,18 @@
 		7E9596451CBF395F005B46B3 /* petPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = petPicCell.m; path = ../../../petShow/BaseProject/View/petPicCell.m; sourceTree = "<group>"; };
 		7E9596471CBF6CBB005B46B3 /* PetPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetPicModel.h; path = ../../../petShow/BaseProject/Model/PetPicModel.h; sourceTree = "<group>"; };
 		7E9596481CBF6CBB005B46B3 /* PetPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetPicModel.m; path = ../../../petShow/BaseProject/Model/PetPicModel.m; sourceTree = "<group>"; };
+		7E95964D1CBF8BEE005B46B3 /* PetChannelViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetChannelViewModel.h; path = ../../../petShow/BaseProject/ViewController/PetChannelViewModel.h; sourceTree = "<group>"; };
+		7E95964E1CBF8BEE005B46B3 /* PetChannelViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetChannelViewModel.m; path = ../../../petShow/BaseProject/ViewController/PetChannelViewModel.m; sourceTree = "<group>"; };
+		7E9596501CBF90DB005B46B3 /* PetChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetChannelController.h; path = ../../../petShow/BaseProject/ViewController/PetChannelController.h; sourceTree = "<group>"; };
+		7E9596511CBF90DB005B46B3 /* PetChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetChannelController.m; path = ../../../petShow/BaseProject/ViewController/PetChannelController.m; sourceTree = "<group>"; };
+		7E9596531CBF9904005B46B3 /* PetChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetChannelCell.h; path = ../../../petShow/BaseProject/View/PetChannelCell.h; sourceTree = "<group>"; };
+		7E9596541CBF9904005B46B3 /* PetChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetChannelCell.m; path = ../../../petShow/BaseProject/View/PetChannelCell.m; sourceTree = "<group>"; };
+		7E9596591CBF9DFF005B46B3 /* PetChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetChannelModel.h; path = ../../../petShow/BaseProject/Model/PetChannelModel.h; sourceTree = "<group>"; };
+		7E95965A1CBF9DFF005B46B3 /* PetChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetChannelModel.m; path = ../../../petShow/BaseProject/Model/PetChannelModel.m; sourceTree = "<group>"; };
+		7E95965D1CBFA11E005B46B3 /* ScrollDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollDisplayViewController.h; sourceTree = "<group>"; };
+		7E95965E1CBFA11E005B46B3 /* ScrollDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollDisplayViewController.m; sourceTree = "<group>"; };
+		7E9596601CBFA14E005B46B3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../../../petShow/BaseProject/ViewController/HomeViewController.h; sourceTree = "<group>"; };
+		7E9596611CBFA14E005B46B3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../../../petShow/BaseProject/ViewController/HomeViewController.m; sourceTree = "<group>"; };
 		7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetSuggestController.h; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.h; sourceTree = "<group>"; };
 		7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetSuggestController.m; path = ../../../petShow/BaseProject/ViewController/PetSuggestController.m; sourceTree = "<group>"; };
 		7EB0931E1CB526D900E5612E /* AllNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllNetManager.h; path = ../../../petShow/BaseProject/NetManager/AllNetManager.h; sourceTree = "<group>"; };
@@ -590,6 +608,7 @@
 		3885C8EF1BE8E96A009441EA /* PSCollectionView-master */ = {
 			isa = PBXGroup;
 			children = (
+				7E95965C1CBFA11E005B46B3 /* ScrollDisplay */,
 				3885C8F01BE8E96A009441EA /* .gitignore */,
 				3885C8F11BE8E96A009441EA /* LICENSE */,
 				3885C8F21BE8E96A009441EA /* PSCollectionView.h */,
@@ -725,6 +744,8 @@
 				7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */,
 				7E9596441CBF395F005B46B3 /* petPicCell.h */,
 				7E9596451CBF395F005B46B3 /* petPicCell.m */,
+				7E9596531CBF9904005B46B3 /* PetChannelCell.h */,
+				7E9596541CBF9904005B46B3 /* PetChannelCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -732,6 +753,8 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E9596501CBF90DB005B46B3 /* PetChannelController.h */,
+				7E9596511CBF90DB005B46B3 /* PetChannelController.m */,
 				7EA25A231CBBB5FD0011A045 /* PetSuggestController.h */,
 				7EA25A241CBBB5FD0011A045 /* PetSuggestController.m */,
 				7EC1BA231CBE173200C51A6F /* PetSuggestZanController.h */,
@@ -740,6 +763,8 @@
 				7E9596421CBF3806005B46B3 /* PetPicController.m */,
 				7E54D31C1CBE75400044F545 /* TestViewController.h */,
 				7E54D31D1CBE75400044F545 /* TestViewController.m */,
+				7E9596601CBFA14E005B46B3 /* HomeViewController.h */,
+				7E9596611CBFA14E005B46B3 /* HomeViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1101,6 +1126,15 @@
 			path = HttpTool;
 			sourceTree = "<group>";
 		};
+		7E95965C1CBFA11E005B46B3 /* ScrollDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				7E95965D1CBFA11E005B46B3 /* ScrollDisplayViewController.h */,
+				7E95965E1CBFA11E005B46B3 /* ScrollDisplayViewController.m */,
+			);
+			path = ScrollDisplay;
+			sourceTree = "<group>";
+		};
 		7EB093171CB522DE00E5612E /* homeModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1108,6 +1142,8 @@
 				7EC64A461CB52900007FF093 /* AllPetNewsModel.m */,
 				7E9596471CBF6CBB005B46B3 /* PetPicModel.h */,
 				7E9596481CBF6CBB005B46B3 /* PetPicModel.m */,
+				7E9596591CBF9DFF005B46B3 /* PetChannelModel.h */,
+				7E95965A1CBF9DFF005B46B3 /* PetChannelModel.m */,
 			);
 			name = homeModel;
 			sourceTree = "<group>";
@@ -1174,6 +1210,8 @@
 		7ED5A1751CB5FA450072EE32 /* homeViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7E95964D1CBF8BEE005B46B3 /* PetChannelViewModel.h */,
+				7E95964E1CBF8BEE005B46B3 /* PetChannelViewModel.m */,
 				7ED5A1761CB5FBE90072EE32 /* AllPetsNewsViewModel.h */,
 				7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */,
 				7E54D3F41CBE8ADD0044F545 /* PetPicViewModel.h */,
@@ -1360,6 +1398,7 @@
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				7E54D3BD1CBE7F520044F545 /* BTLHelpMeMakingOfferData.m in Sources */,
 				7E54D3EA1CBE7F520044F545 /* WXPaySDKData.m in Sources */,
+				7E95965F1CBFA11E005B46B3 /* ScrollDisplayViewController.m in Sources */,
 				7E54D3E21CBE7F520044F545 /* UpDataShopInfo.m in Sources */,
 				7E9596491CBF6CBB005B46B3 /* PetPicModel.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
@@ -1379,6 +1418,7 @@
 				7E54D3EE1CBE7F520044F545 /* BTLVersion.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				7E54D3BB1CBE7F520044F545 /* BTLHelpMeMakedOfferData.m in Sources */,
+				7E9596521CBF90DB005B46B3 /* PetChannelController.m in Sources */,
 				7E54D3C91CBE7F520044F545 /* BTLOrderPay.m in Sources */,
 				7E54D3CA1CBE7F520044F545 /* BTLPayData.m in Sources */,
 				7E54D3E91CBE7F520044F545 /* WXPaySDK.m in Sources */,
@@ -1406,6 +1446,7 @@
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
 				7E54D3CF1CBE7F520044F545 /* ReturnExchangeInfo.m in Sources */,
 				7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */,
+				7E95964F1CBF8BEE005B46B3 /* PetChannelViewModel.m in Sources */,
 				7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */,
 				7E54D3D41CBE7F520044F545 /* BTLPirmeData.m in Sources */,
 				7E54D3E01CBE7F520044F545 /* ShopMoneyInfo.m in Sources */,
@@ -1431,9 +1472,12 @@
 				7E54D3B41CBE7F520044F545 /* BTLAlterPwd.m in Sources */,
 				7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */,
 				7E54D3E61CBE7F520044F545 /* BTLUserInfo.m in Sources */,
+				7E95965B1CBF9DFF005B46B3 /* PetChannelModel.m in Sources */,
 				7E54D3C41CBE7F520044F545 /* OrderCardPayInfo.m in Sources */,
 				7E54D3BF1CBE7F520044F545 /* BTLIssueHelpSearch.m in Sources */,
 				7E54D3DD1CBE7F520044F545 /* ReturnFreightData.m in Sources */,
+				7E9596621CBFA14E005B46B3 /* HomeViewController.m in Sources */,
+				7E9596551CBF9904005B46B3 /* PetChannelCell.m in Sources */,
 				7E54D3BC1CBE7F520044F545 /* BTLHelpMeMakedOfferInfo.m in Sources */,
 				7EC1BA401CBE269B00C51A6F /* SDWebImageManager+MJ.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,

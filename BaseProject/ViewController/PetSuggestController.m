@@ -10,6 +10,7 @@
 #import "AllPetsNewsViewModel.h"
 #import "SuggestOneTableViewCell.h"
 #import "SuggestTwoTableViewCell.h"
+#import "PetSuggestZanController.h"
 @interface PetSuggestController ()
 @property(nonatomic,strong)AllPetsNewsViewModel *PetVM;
 @end
@@ -21,8 +22,14 @@
     }
     return _PetVM;
 }
+- (IBAction)gotoZanVc:(id)sender {
+    PetSuggestZanController *zanVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ZanVc"];
+    zanVc.ZanDataArr = self.PetVM.PhotoZanArr;
+    [self.navigationController pushViewController:zanVc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.PetVM refreshDataCompletionHandle:^(NSError *error) {
             [self.tableView.header endRefreshing];

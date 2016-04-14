@@ -8,6 +8,7 @@
 
 #import "AllNetManager.h"
 #import "AllPetNewsModel.h"
+#import "PetChannelModel.h"
 #import "PetPicModel.h"
 #define BaseAllPetUrl  @"http://api.gutou.com/v3/main.html"
 #define setdo          @"do" :     @"index"
@@ -22,6 +23,7 @@
 
 @implementation AllNetManager
 
+
 +(id)getAllPetsNewsWithPageId :(NSInteger)pageId kComplete{
     
     NSDictionary *dict = @{setdo,setPhone,setLng,setDevice,setVer,setSystem,setLimit,setLat,@"page_id":@(pageId)};
@@ -32,10 +34,18 @@
       
     }];
 }
+
 +(id)getAllPetsPicWithPageId :(NSInteger )pageId kComplete{
-    NSString *path = [NSString stringWithFormat:@"http://apiv3.ixingji.com/ixingji/ifollow/followtops.json?client=Android&pname=X27A_331_B_206&appid=27&lgg=0&pmtfs=300-550&uid=15235799&sid=928&appid=27&start=%ld&token=ulsdW8yVYy1Hy2M8&size=30",pageId];
-return   [self GET:path parameters:nil completionHandler:^(id responseObj, NSError *error) {
+        NSString *path = [NSString stringWithFormat:@"http://apiv3.ixingji.com/ixingji/ifollow/followtops.json?client=Android&pname=X27A_331_B_206&appid=27&lgg=0&pmtfs=300-550&uid=15235799&sid=928&appid=27&start=%ld&token=ulsdW8yVYy1Hy2M8&size=30",pageId];
+         return   [self GET:path parameters:nil completionHandler:^(id responseObj, NSError *error) {
          complete([PetPicModel objectWithKeyValues:responseObj],error);
+    }];
+}
+//获取所有宠物的频道
++(id)getAllPetsChannelWithPageId :(NSInteger )pageId kComplete{
+    NSString *path = [NSString stringWithFormat:@"http://api.gutou.com/v3/channel.html?do=getlist&limit=10&_lng=113.27656&_device=ANDROID&_ver=3.02&sort=2&page=%ld&_system=4.4.4&_lat=23.175742&type=0",pageId];
+    return   [self GET:path parameters:nil completionHandler:^(id responseObj, NSError *error) {
+        complete([PetChannelModel objectWithKeyValues:responseObj],error);
     }];
 }
 @end

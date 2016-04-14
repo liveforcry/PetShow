@@ -79,11 +79,7 @@
         lastView = nil;
     }
 }
-- (IBAction)GotoSuggestDetail:(id)sender {
-    PetSuggestZanController *zanVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ZanVc"];
-    zanVc.ZanDataArr = self.phtotZan;
-    
-}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

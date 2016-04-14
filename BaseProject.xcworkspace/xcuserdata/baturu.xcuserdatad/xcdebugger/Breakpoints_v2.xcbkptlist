@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseProject/ViewController/TestViewController.m"
-            timestampString = "482247220.591747"
+            filePath = "BaseProject/ViewModel/AllPetsNewsViewModel.m"
+            timestampString = "482332242.123089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-loginBtnDidClick:pwd:"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-isOnePhotoForRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseProject/ViewController/TestViewController.m"
-            timestampString = "482247221.871544"
+            filePath = "BaseProject/ViewModel/AllPetsNewsViewModel.m"
+            timestampString = "482332248.634755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-loginBtnDidClick:pwd:"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-isOnePhotoForRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseProject/ViewController/TestViewController.m"
-            timestampString = "482247227.791568"
+            filePath = "BaseProject/ViewModel/AllPetsNewsViewModel.m"
+            timestampString = "482332258.88555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-loginBtnDidClick:pwd:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-getDataListForRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

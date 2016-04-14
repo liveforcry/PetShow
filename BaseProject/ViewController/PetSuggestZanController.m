@@ -17,8 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hidesBottomBarWhenPushed = YES;
     [self.tableView reloadData];
-  
+  self.title = @"赞的人";
 }
 - (DataListZan_List *)getDataForRow: (NSInteger)row{
     return _ZanDataArr[row];

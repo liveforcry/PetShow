@@ -9,6 +9,7 @@
 #import "PetPicViewModel.h"
 #import "AllNetManager.h"
 #import "PetPicModel.h"
+#import "PetChannelModel.h"
 @implementation PetPicViewModel
 //刷新数据
 - (void)refreshDataCompletionHandle:(CompletionHandle)completionHandle{
@@ -19,7 +20,7 @@
 //得到数据
 -(void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle{
     
-    [AllNetManager getAllPetsPicWithPageId:_pageId complete:^(PetPicModel *model, NSError *error) {
+    [AllNetManager getAllPetsPicWithPageId :_pageId complete:^(PetPicModel *model, NSError *error) {
         if (self.pageId == 0) {
             [self.dataArr removeAllObjects];
             self.dataArr = nil;
@@ -31,7 +32,7 @@
 }
 //加载更多
 -(void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle{
-    _pageId += 30;
+    _pageId += 1;
     [self getDataFromNetCompleteHandle:completionHandle];
     
 }
@@ -52,7 +53,7 @@
 }
 //用户的积分
 -(NSString *)getUsersScoreForRow : (NSInteger)row{
-    return [NSString stringWithFormat:@"[self getDataListForRow:row].nick :%ld",[self getDataListForRow:row].score];
+    return [NSString stringWithFormat:@"积分:%ld",[self getDataListForRow:row].score];
 }
 //用户的等级
 -(NSString *)getUserLeveForRow : (NSInteger)row{

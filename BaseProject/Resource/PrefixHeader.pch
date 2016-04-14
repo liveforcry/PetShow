@@ -41,10 +41,12 @@
 #import <BlocksKit+MessageUI.h>
 #import <BlocksKit+UIKit.h>
 /* --------------------------- */
+// 颜色
+#define YCColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #import "BTLAllHttpTool.h"
 #import "BTLHttpTool.h"
-
+#import "AllNetManager.h"
 
 
 #import <MJRefresh.h>    //优秀的滚动视图头部和脚步刷新效果
