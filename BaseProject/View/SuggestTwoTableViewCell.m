@@ -16,16 +16,8 @@
 @implementation SuggestTwoTableViewCell
 
 - (void)awakeFromNib {
-//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//    [flowLayout setItemSize:CGSizeMake(88, 88)];
-//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-//    flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-//    flowLayout.minimumLineSpacing = 0;
-//    flowLayout.minimumInteritemSpacing = 0;
-//    [_PetCollectinView setCollectionViewLayout:flowLayout];
-   
-}
 
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

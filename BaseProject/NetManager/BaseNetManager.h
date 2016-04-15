@@ -17,8 +17,8 @@
 
 /** 对AFHTTPSessionManager的POST请求方法进行了封装 */
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void(^)(id responseObj, NSError *error))complete;
-
-
+//自定定义的请求网络数据
++(id)GetMakeOwn:(NSString *)path parameters:(NSDictionary *)params completeHandle:(void(^)(id responseObj, NSError *error))complete;
 /**
  *  为了应付某些服务器对于中文字符串不支持的情况，需要转化字符串为带有%号形势
  *

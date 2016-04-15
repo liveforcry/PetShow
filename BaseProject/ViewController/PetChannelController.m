@@ -11,6 +11,7 @@
 #import "PetChannelCell.h"
 @interface PetChannelController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)PetChannelViewModel *PetChanVM;
+@property (weak, nonatomic) IBOutlet UIView *headView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -21,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.PetChanVM refreshDataCompletionHandle:^(NSError *error) {
             [self.tableView.header endRefreshing];
@@ -35,7 +35,7 @@
         }];
     }];
     [self.tableView.header beginRefreshing];
-
+   
 }
 
 - (void)didReceiveMemoryWarning {

@@ -243,6 +243,7 @@
 
     __block NSURLSessionDataTask *dataTask = nil;
     dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+        
         if (error) {
             if (failure) {
                 failure(dataTask, error);

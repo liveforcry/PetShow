@@ -532,6 +532,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 
     dataTask.taskDescription = self.taskDescriptionForSessionTasks;
     [self setDelegate:delegate forTask:dataTask];
+    
 }
 
 - (void)addDelegateForUploadTask:(NSURLSessionUploadTask *)uploadTask
