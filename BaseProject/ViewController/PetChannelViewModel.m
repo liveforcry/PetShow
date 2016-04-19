@@ -10,6 +10,14 @@
 #import "PetChannelModel.h"
 
 @implementation PetChannelViewModel
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _flag = YES;
+    }
+    return self;
+}
 //刷新数据
 - (void)refreshDataCompletionHandle:(CompletionHandle)completionHandle{
     _pageId = 1;
@@ -24,20 +32,16 @@
             [self.dataArr removeAllObjects];
             self.dataArr = nil;
         }
-        self.dataArr = [NSMutableArray arrayWithArray:model.data.list];
-     
+        [self.dataArr addObjectsFromArray:model.data.list];
         completionHandle(error);
     }];
 }
 //加载更多
 -(void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle{
-    UIButton *bu = nil;
-    [bu bk_addEventHandler:^(id sender) {
-        
-    } forControlEvents:UIControlEventTouchUpInside];
     _pageId += 1;
     [self getDataFromNetCompleteHandle:completionHandle];
     if (_pageId == 4) {
+        _flag = NO;
         UIAlertView *alett = [[UIAlertView alloc]initWithTitle:@"消息" message:@"没有数据了,刷新吧" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"返回", nil];
         [alett show];
     }

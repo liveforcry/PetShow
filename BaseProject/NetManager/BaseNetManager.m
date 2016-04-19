@@ -43,6 +43,7 @@ static AFHTTPSessionManager *manager = nil;
             aString = [aString stringByReplacingOccurrencesOfString:@")" withString:@""];
             NSData *data =[aString dataUsingEncoding:NSUTF8StringEncoding];
             id responseObj=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves|NSJSONReadingAllowFragments error:&error1];
+            
             if (error1) {
                 complete(nil, error1);
             }else{

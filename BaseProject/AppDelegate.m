@@ -10,17 +10,38 @@
 #import "AppDelegate+Category.h"
 #import "AllNetManager.h"
 #import "UIColor+Art.h"
+#import "WelcomeViewController.h"
+#import "TabViewController.h"
 @interface AppDelegate ()
 
 @end
-
+#define  versionKey @"version"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [self setupAppearance];
-    [self configGlobalUIStyle];
+//    [self configGlobalUIStyle];
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
+    self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    //从偏好设置里面取上一次的版本号
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:versionKey];
+    
+    //判断是否有新版本
+    //如果系统有新版本好就运行新特性
+    if (![currentVersion isEqualToString:lastVersion]) {
+        WelcomeViewController  *newFecture = [kStoryboard(@"Main") instantiateViewControllerWithIdentifier:@"guide"];
+        self.window .rootViewController  = newFecture;
+        //保存当前的版本号
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:versionKey];
+    }else{
+      
+        _window.rootViewController = [kStoryboard(@"Main") instantiateViewControllerWithIdentifier:@"home"];
+    }
+    
+
+    
     
     return YES;
 }

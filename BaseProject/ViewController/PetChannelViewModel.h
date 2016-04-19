@@ -11,6 +11,8 @@
 @interface PetChannelViewModel : BaseViewModel
 @property(nonatomic,assign)NSInteger pageId;
 //行数
+@property(nonatomic,assign)BOOL flag;
+
 @property(nonatomic,assign)NSInteger rowNumber;
 //用户的头像url
 -(NSURL *)getUsersUrlForRow : (NSInteger)row;

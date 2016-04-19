@@ -7,19 +7,25 @@
 //
 
 #import "ShopSuggestCell.h"
-
+#import "PetShopModel.h"
 #import "PetShopViewModel.h"
-
+#import "shopDetailViewController.h"
 @interface ShopSuggestCell ()<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
 @end
 @implementation ShopSuggestCell
-
+-(void)dealWithDataCell1 : (PetShopViewModel *)PetVM row : (NSInteger)row{
+    self.phtot = PetVM.ZuiXinArr;
+}
 - (void)setPhtot:(NSArray *)phtot
 {
+    
     _phtot = phtot;
     _phtotCount = phtot.count;
-    [self.collectionVeiw reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionVeiw reloadData];
+    });
+
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -49,15 +55,27 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"coll1" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collOne" forIndexPath:indexPath];
     UIImageView *shopPhtotImg = [cell viewWithTag:100];
     UILabel *shopNameLb = [cell viewWithTag:200];
     UILabel *shopScoreLb = [cell viewWithTag:300];
-    [shopPhtotImg  setImageWithURL: [self.shopVm getPhotosUrlForRow:indexPath.row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
-    shopNameLb.text = [self.shopVm getUserNickForRow:indexPath.row];
-    shopScoreLb.text = [self.shopVm getMoneyForRow:indexPath.row];
+
+    ShopData *data = self.phtot[indexPath.row];
+    [shopPhtotImg  setImageWithURL: [NSURL URLWithString:data.icon] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    shopNameLb.text = data.name;
+    shopScoreLb.text = [NSString stringWithFormat:@"%ld",data.coinCount];
     return cell;
 }
-
-
+//点击了触发
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    ShopData *data = self.phtot[indexPath.row];
+    NSString *path = [NSString stringWithFormat:@"http://score.yc.cn/store/goods.do?id=%ld",data.goodsId];
+    NSURL *pathUrl = [NSURL URLWithString:path];
+//    shopDetailViewController *shopVc = [[shopDetailViewController alloc]initWithURL:pathUrl];
+//    if ([self.delegate respondsToSelector:@selector(gotoDetailGoods:url:)]) {
+        [self.delegate gotoDetailGoods:self url:pathUrl];
+//    }
+    
+    
+}
 @end

@@ -101,7 +101,7 @@ static NSString * const reuseIdentifier = @"picCell";
 }
 //四周边缘
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(magin, 0, magin, 0);
+    return UIEdgeInsetsMake(magin + 44, 0, magin, 0);
 }
 //行间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{

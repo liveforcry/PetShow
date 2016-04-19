@@ -64,11 +64,17 @@
 		3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0BA1BD74AE90014E661 /* BaseViewModel.m */; };
 		3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */; };
 		3886C0C11BD74B090014E661 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0C01BD74B090014E661 /* BaseModel.m */; };
+		7E0402BF1CC60512002AB801 /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402BE1CC60512002AB801 /* registerViewController.m */; };
+		7E0402C21CC60678002AB801 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402C11CC60678002AB801 /* LoginViewController.m */; };
+		7E0402C51CC6098A002AB801 /* shopAllViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402C41CC6098A002AB801 /* shopAllViewCell.m */; };
+		7E0402C81CC617E7002AB801 /* shoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402C71CC617E7002AB801 /* shoppingViewController.m */; };
+		7E0402D11CC62CFB002AB801 /* MedetilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402D01CC62CFB002AB801 /* MedetilViewController.m */; };
+		7E0402D31CC63977002AB801 /* activity_offline_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0402D21CC63977002AB801 /* activity_offline_icon@2x.png */; };
+		7E0402E41CC66174002AB801 /* shopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0402E31CC66174002AB801 /* shopDetailViewController.m */; };
 		7E1643BF1CAE265D0053E6E0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1643BD1CAE265D0053E6E0 /* UIColor+Extension.m */; };
 		7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EAE271CBCDC19000D2194 /* SuggestOneTableViewCell.m */; };
 		7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */; };
 		7E54D31B1CBE73280044F545 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D31A1CBE73280044F545 /* TabViewController.m */; };
-		7E54D31E1CBE75400044F545 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D31D1CBE75400044F545 /* TestViewController.m */; };
 		7E54D3B41CBE7F520044F545 /* BTLAlterPwd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3231CBE7F510044F545 /* BTLAlterPwd.m */; };
 		7E54D3B51CBE7F520044F545 /* BalancePayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3261CBE7F510044F545 /* BalancePayData.m */; };
 		7E54D3B61CBE7F520044F545 /* BalancePayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54D3281CBE7F510044F545 /* BalancePayInfo.m */; };
@@ -154,12 +160,18 @@
 		7EC1BA401CBE269B00C51A6F /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1BA381CBE269B00C51A6F /* SDWebImageManager+MJ.m */; };
 		7EC3E9D11CC09B2D00DF4579 /* PetShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9D01CC09B2D00DF4579 /* PetShopModel.m */; };
 		7EC3E9D51CC09C9600DF4579 /* PetShopViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9D41CC09C9600DF4579 /* PetShopViewModel.m */; };
-		7EC3E9DF1CC0D03500DF4579 /* ShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9DE1CC0D03500DF4579 /* ShopTableViewController.m */; };
 		7EC3E9E21CC0D0CA00DF4579 /* ShopSuggestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9E11CC0D0CA00DF4579 /* ShopSuggestCell.m */; };
-		7EC3E9E61CC0D0FD00DF4579 /* ShopAllCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9E51CC0D0FD00DF4579 /* ShopAllCell.m */; };
 		7EC3E9EF1CC0EA1D00DF4579 /* ShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3E9EE1CC0EA1D00DF4579 /* ShopController.m */; };
 		7EC64A471CB52900007FF093 /* AllPetNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC64A461CB52900007FF093 /* AllPetNewsModel.m */; };
 		7ECDCC971CBE4F1800D7A162 /* UIColor+Art.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDCC961CBE4F1800D7A162 /* UIColor+Art.m */; };
+		7ED5299B1CC4882200C666CF /* makeOwnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529991CC4882200C666CF /* makeOwnCell.m */; };
+		7ED5299C1CC4882200C666CF /* makeOwnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ED5299A1CC4882200C666CF /* makeOwnCell.xib */; };
+		7ED529CC1CC4C95000C666CF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529CB1CC4C95000C666CF /* WelcomeViewController.m */; };
+		7ED529CF1CC4C97C00C666CF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529CE1CC4C97C00C666CF /* UIView+Extension.m */; };
+		7ED529DA1CC5080800C666CF /* MeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529D81CC5080800C666CF /* MeViewCell.m */; };
+		7ED529DB1CC5080800C666CF /* MeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ED529D91CC5080800C666CF /* MeViewCell.xib */; };
+		7ED529DE1CC50DD800C666CF /* LoveDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529DD1CC50DD800C666CF /* LoveDetailViewController.m */; };
+		7ED529E21CC50E6700C666CF /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED529E01CC50E6700C666CF /* Factory.m */; };
 		7ED5A1781CB5FBE90072EE32 /* AllPetsNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +268,19 @@
 		3886C0C21BD74B430014E661 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4329DABFE5AD654FE71597C9 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5EAAD623A23724C816F8DC02 /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0402BD1CC60512002AB801 /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = ../../../petShow/BaseProject/ViewController/registerViewController.h; sourceTree = "<group>"; };
+		7E0402BE1CC60512002AB801 /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerViewController.m; path = ../../../petShow/BaseProject/ViewController/registerViewController.m; sourceTree = "<group>"; };
+		7E0402C01CC60678002AB801 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../../petShow/BaseProject/ViewController/LoginViewController.h; sourceTree = "<group>"; };
+		7E0402C11CC60678002AB801 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../../petShow/BaseProject/ViewController/LoginViewController.m; sourceTree = "<group>"; };
+		7E0402C31CC6098A002AB801 /* shopAllViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopAllViewCell.h; path = ../../../petShow/BaseProject/View/shopAllViewCell.h; sourceTree = "<group>"; };
+		7E0402C41CC6098A002AB801 /* shopAllViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopAllViewCell.m; path = ../../../petShow/BaseProject/View/shopAllViewCell.m; sourceTree = "<group>"; };
+		7E0402C61CC617E7002AB801 /* shoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shoppingViewController.h; path = ../../../petShow/BaseProject/ViewController/shoppingViewController.h; sourceTree = "<group>"; };
+		7E0402C71CC617E7002AB801 /* shoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shoppingViewController.m; path = ../../../petShow/BaseProject/ViewController/shoppingViewController.m; sourceTree = "<group>"; };
+		7E0402CF1CC62CFB002AB801 /* MedetilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedetilViewController.h; sourceTree = "<group>"; };
+		7E0402D01CC62CFB002AB801 /* MedetilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedetilViewController.m; sourceTree = "<group>"; };
+		7E0402D21CC63977002AB801 /* activity_offline_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_offline_icon@2x.png"; sourceTree = "<group>"; };
+		7E0402E21CC66174002AB801 /* shopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopDetailViewController.h; path = ../../../petShow/BaseProject/ViewController/shopDetailViewController.h; sourceTree = "<group>"; };
+		7E0402E31CC66174002AB801 /* shopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopDetailViewController.m; path = ../../../petShow/BaseProject/ViewController/shopDetailViewController.m; sourceTree = "<group>"; };
 		7E1643BD1CAE265D0053E6E0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		7E1643BE1CAE265D0053E6E0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		7E3EAE261CBCDC19000D2194 /* SuggestOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuggestOneTableViewCell.h; path = ../../../petShow/BaseProject/View/SuggestOneTableViewCell.h; sourceTree = "<group>"; };
@@ -264,8 +289,6 @@
 		7E3EAE2D1CBCDC68000D2194 /* SuggestTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuggestTwoTableViewCell.m; path = ../../../petShow/BaseProject/View/SuggestTwoTableViewCell.m; sourceTree = "<group>"; };
 		7E54D3191CBE73280044F545 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabViewController.h; path = ../../../petShow/BaseProject/ViewModel/TabViewController.h; sourceTree = "<group>"; };
 		7E54D31A1CBE73280044F545 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabViewController.m; path = ../../../petShow/BaseProject/ViewModel/TabViewController.m; sourceTree = "<group>"; };
-		7E54D31C1CBE75400044F545 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = ../../../petShow/BaseProject/ViewController/TestViewController.h; sourceTree = "<group>"; };
-		7E54D31D1CBE75400044F545 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = ../../../petShow/BaseProject/ViewController/TestViewController.m; sourceTree = "<group>"; };
 		7E54D3221CBE7F510044F545 /* BTLAlterPwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLAlterPwd.h; sourceTree = "<group>"; };
 		7E54D3231CBE7F510044F545 /* BTLAlterPwd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLAlterPwd.m; sourceTree = "<group>"; };
 		7E54D3251CBE7F510044F545 /* BalancePayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalancePayData.h; sourceTree = "<group>"; };
@@ -435,18 +458,28 @@
 		7EC3E9D01CC09B2D00DF4579 /* PetShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetShopModel.m; path = ../../../petShow/BaseProject/Model/PetShopModel.m; sourceTree = "<group>"; };
 		7EC3E9D31CC09C9600DF4579 /* PetShopViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetShopViewModel.h; path = ../../../petShow/BaseProject/ViewModel/PetShopViewModel.h; sourceTree = "<group>"; };
 		7EC3E9D41CC09C9600DF4579 /* PetShopViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetShopViewModel.m; path = ../../../petShow/BaseProject/ViewModel/PetShopViewModel.m; sourceTree = "<group>"; };
-		7EC3E9DD1CC0D03500DF4579 /* ShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTableViewController.h; path = ../../../petShow/BaseProject/ViewController/ShopTableViewController.h; sourceTree = "<group>"; };
-		7EC3E9DE1CC0D03500DF4579 /* ShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopTableViewController.m; path = ../../../petShow/BaseProject/ViewController/ShopTableViewController.m; sourceTree = "<group>"; };
 		7EC3E9E01CC0D0CA00DF4579 /* ShopSuggestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopSuggestCell.h; path = ../../../petShow/BaseProject/View/ShopSuggestCell.h; sourceTree = "<group>"; };
 		7EC3E9E11CC0D0CA00DF4579 /* ShopSuggestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopSuggestCell.m; path = ../../../petShow/BaseProject/View/ShopSuggestCell.m; sourceTree = "<group>"; };
-		7EC3E9E41CC0D0FD00DF4579 /* ShopAllCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopAllCell.h; path = ../../../petShow/BaseProject/View/ShopAllCell.h; sourceTree = "<group>"; };
-		7EC3E9E51CC0D0FD00DF4579 /* ShopAllCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopAllCell.m; path = ../../../petShow/BaseProject/View/ShopAllCell.m; sourceTree = "<group>"; };
 		7EC3E9ED1CC0EA1D00DF4579 /* ShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopController.h; path = ../../../petShow/BaseProject/ViewController/ShopController.h; sourceTree = "<group>"; };
 		7EC3E9EE1CC0EA1D00DF4579 /* ShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopController.m; path = ../../../petShow/BaseProject/ViewController/ShopController.m; sourceTree = "<group>"; };
 		7EC64A451CB52900007FF093 /* AllPetNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetNewsModel.h; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.h; sourceTree = "<group>"; };
 		7EC64A461CB52900007FF093 /* AllPetNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllPetNewsModel.m; path = ../../../petShow/BaseProject/Model/AllPetNewsModel.m; sourceTree = "<group>"; };
 		7ECDCC951CBE4F1800D7A162 /* UIColor+Art.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Art.h"; sourceTree = "<group>"; };
 		7ECDCC961CBE4F1800D7A162 /* UIColor+Art.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Art.m"; sourceTree = "<group>"; };
+		7ED529981CC4882200C666CF /* makeOwnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = makeOwnCell.h; sourceTree = "<group>"; };
+		7ED529991CC4882200C666CF /* makeOwnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = makeOwnCell.m; sourceTree = "<group>"; };
+		7ED5299A1CC4882200C666CF /* makeOwnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = makeOwnCell.xib; sourceTree = "<group>"; };
+		7ED529CA1CC4C95000C666CF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		7ED529CB1CC4C95000C666CF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		7ED529CD1CC4C97C00C666CF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7ED529CE1CC4C97C00C666CF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7ED529D71CC5080800C666CF /* MeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeViewCell.h; path = ../../../petShow/BaseProject/View/MeViewCell.h; sourceTree = "<group>"; };
+		7ED529D81CC5080800C666CF /* MeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeViewCell.m; path = ../../../petShow/BaseProject/View/MeViewCell.m; sourceTree = "<group>"; };
+		7ED529D91CC5080800C666CF /* MeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeViewCell.xib; path = ../../../petShow/BaseProject/View/MeViewCell.xib; sourceTree = "<group>"; };
+		7ED529DC1CC50DD800C666CF /* LoveDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoveDetailViewController.h; path = ../../../petShow/BaseProject/ViewController/LoveDetailViewController.h; sourceTree = "<group>"; };
+		7ED529DD1CC50DD800C666CF /* LoveDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoveDetailViewController.m; path = ../../../petShow/BaseProject/ViewController/LoveDetailViewController.m; sourceTree = "<group>"; };
+		7ED529DF1CC50E6700C666CF /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		7ED529E01CC50E6700C666CF /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		7ED5A1761CB5FBE90072EE32 /* AllPetsNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllPetsNewsViewModel.h; path = ../../../petShow/BaseProject/ViewModel/AllPetsNewsViewModel.h; sourceTree = "<group>"; };
 		7ED5A1771CB5FBE90072EE32 /* AllPetsNewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllPetsNewsViewModel.m; path = ../../../petShow/BaseProject/ViewModel/AllPetsNewsViewModel.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +515,10 @@
 		3804CE481BD758F10046C8C8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				7ED529CD1CC4C97C00C666CF /* UIView+Extension.h */,
+				7ED529DF1CC50E6700C666CF /* Factory.h */,
+				7ED529E01CC50E6700C666CF /* Factory.m */,
+				7ED529CE1CC4C97C00C666CF /* UIView+Extension.m */,
 				3804CE491BD758F10046C8C8 /* AppDelegate+Category.h */,
 				3804CE4A1BD758F10046C8C8 /* AppDelegate+Category.m */,
 				3804CE4B1BD758F10046C8C8 /* NSObject+Common.h */,
@@ -722,6 +759,7 @@
 		3886C0B21BD74A4A0014E661 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7E0402D21CC63977002AB801 /* activity_offline_icon@2x.png */,
 				3886C0A21BD748830014E661 /* Assets.xcassets */,
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
@@ -753,6 +791,7 @@
 		3886C0B51BD74A4A0014E661 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7ED529D31CC507C400C666CF /* MeCell */,
 				7EC3E9E31CC0D0D600DF4579 /* shopCell */,
 				7EC3E9CE1CC09AD100DF4579 /* homeCell */,
 			);
@@ -762,6 +801,8 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7ED529E41CC50E9600C666CF /* meConroler */,
+				7ED529C51CC4C89F00C666CF /* guideNewFeature */,
 				7EC3E9D61CC0CDF700DF4579 /* ShppController */,
 				7EC3E9CD1CC09AAD00DF4579 /* homeController */,
 			);
@@ -777,6 +818,15 @@
 				7ED5A1751CB5FA450072EE32 /* homeViewModel */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7E0402E51CC66910002AB801 /* 测试失败的 */ = {
+			isa = PBXGroup;
+			children = (
+				7E0402C61CC617E7002AB801 /* shoppingViewController.h */,
+				7E0402C71CC617E7002AB801 /* shoppingViewController.m */,
+			);
+			name = "测试失败的";
 			sourceTree = "<group>";
 		};
 		7E54D30F1CBE51A90044F545 /* Other */ = {
@@ -1197,8 +1247,6 @@
 				7EC1BA241CBE173200C51A6F /* PetSuggestZanController.m */,
 				7E9596411CBF3806005B46B3 /* PetPicController.h */,
 				7E9596421CBF3806005B46B3 /* PetPicController.m */,
-				7E54D31C1CBE75400044F545 /* TestViewController.h */,
-				7E54D31D1CBE75400044F545 /* TestViewController.m */,
 				7E9596601CBFA14E005B46B3 /* HomeViewController.h */,
 				7E9596611CBFA14E005B46B3 /* HomeViewController.m */,
 			);
@@ -1234,10 +1282,11 @@
 		7EC3E9D61CC0CDF700DF4579 /* ShppController */ = {
 			isa = PBXGroup;
 			children = (
-				7EC3E9DD1CC0D03500DF4579 /* ShopTableViewController.h */,
-				7EC3E9DE1CC0D03500DF4579 /* ShopTableViewController.m */,
 				7EC3E9ED1CC0EA1D00DF4579 /* ShopController.h */,
 				7EC3E9EE1CC0EA1D00DF4579 /* ShopController.m */,
+				7E0402E21CC66174002AB801 /* shopDetailViewController.h */,
+				7E0402E31CC66174002AB801 /* shopDetailViewController.m */,
+				7E0402E51CC66910002AB801 /* 测试失败的 */,
 			);
 			name = ShppController;
 			sourceTree = "<group>";
@@ -1245,12 +1294,49 @@
 		7EC3E9E31CC0D0D600DF4579 /* shopCell */ = {
 			isa = PBXGroup;
 			children = (
+				7ED529981CC4882200C666CF /* makeOwnCell.h */,
+				7ED529991CC4882200C666CF /* makeOwnCell.m */,
+				7ED5299A1CC4882200C666CF /* makeOwnCell.xib */,
 				7EC3E9E01CC0D0CA00DF4579 /* ShopSuggestCell.h */,
 				7EC3E9E11CC0D0CA00DF4579 /* ShopSuggestCell.m */,
-				7EC3E9E41CC0D0FD00DF4579 /* ShopAllCell.h */,
-				7EC3E9E51CC0D0FD00DF4579 /* ShopAllCell.m */,
+				7E0402C31CC6098A002AB801 /* shopAllViewCell.h */,
+				7E0402C41CC6098A002AB801 /* shopAllViewCell.m */,
 			);
 			name = shopCell;
+			sourceTree = "<group>";
+		};
+		7ED529C51CC4C89F00C666CF /* guideNewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7ED529CA1CC4C95000C666CF /* WelcomeViewController.h */,
+				7ED529CB1CC4C95000C666CF /* WelcomeViewController.m */,
+			);
+			name = guideNewFeature;
+			sourceTree = "<group>";
+		};
+		7ED529D31CC507C400C666CF /* MeCell */ = {
+			isa = PBXGroup;
+			children = (
+				7ED529D71CC5080800C666CF /* MeViewCell.h */,
+				7ED529D81CC5080800C666CF /* MeViewCell.m */,
+				7ED529D91CC5080800C666CF /* MeViewCell.xib */,
+			);
+			name = MeCell;
+			sourceTree = "<group>";
+		};
+		7ED529E41CC50E9600C666CF /* meConroler */ = {
+			isa = PBXGroup;
+			children = (
+				7E0402BD1CC60512002AB801 /* registerViewController.h */,
+				7E0402BE1CC60512002AB801 /* registerViewController.m */,
+				7E0402CF1CC62CFB002AB801 /* MedetilViewController.h */,
+				7E0402D01CC62CFB002AB801 /* MedetilViewController.m */,
+				7E0402C01CC60678002AB801 /* LoginViewController.h */,
+				7E0402C11CC60678002AB801 /* LoginViewController.m */,
+				7ED529DC1CC50DD800C666CF /* LoveDetailViewController.h */,
+				7ED529DD1CC50DD800C666CF /* LoveDetailViewController.m */,
+			);
+			name = meConroler;
 			sourceTree = "<group>";
 		};
 		7ED5A1751CB5FA450072EE32 /* homeViewModel */ = {
@@ -1359,6 +1445,7 @@
 				3885C8E51BE8E8FB009441EA /* ios-social-sdk-comment-detail.html in Resources */,
 				3886C0A31BD748830014E661 /* Assets.xcassets in Resources */,
 				3885C8EB1BE8E8FB009441EA /* ios-social-sdk-share-detail.html in Resources */,
+				7ED529DB1CC5080800C666CF /* MeViewCell.xib in Resources */,
 				3885C8EC1BE8E8FB009441EA /* ios-social-sdk-share-quick.html in Resources */,
 				3885C8F71BE8E96A009441EA /* .gitignore in Resources */,
 				3885C8D51BE8E8FB009441EA /* UMSCommentDetailController.xib in Resources */,
@@ -1368,6 +1455,7 @@
 				3885C8E41BE8E8FB009441EA /* iOS-social-releasenote.html in Resources */,
 				3885C8DA1BE8E8FB009441EA /* UMSLoginViewController.xib in Resources */,
 				3885C8E31BE8E8FB009441EA /* iOS-social-analytics-releasenote.html in Resources */,
+				7E0402D31CC63977002AB801 /* activity_offline_icon@2x.png in Resources */,
 				3885C8D71BE8E8FB009441EA /* UMSCommentInputControlleriPad.xib in Resources */,
 				3885C8D91BE8E8FB009441EA /* UMShareEditViewControlleriPad.xib in Resources */,
 				3886C0AE1BD749A00014E661 /* LaunchScreen.xib in Resources */,
@@ -1375,6 +1463,7 @@
 				3885C8E61BE8E8FB009441EA /* ios-social-sdk-comment-quick.html in Resources */,
 				3885C8D31BE8E8FB009441EA /* UMSocialLocalizable.strings in Resources */,
 				7EC1BA3A1CBE269B00C51A6F /* MJPhotoBrowser.bundle in Resources */,
+				7ED5299C1CC4882200C666CF /* makeOwnCell.xib in Resources */,
 				3886C0A11BD748830014E661 /* Main.storyboard in Resources */,
 				3885C8DB1BE8E8FB009441EA /* UMSnsAccountViewController.xib in Resources */,
 				3885C8DC1BE8E8FB009441EA /* UMSShareListController.xib in Resources */,
@@ -1440,9 +1529,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0402C21CC60678002AB801 /* LoginViewController.m in Sources */,
 				7EC3E9D51CC09C9600DF4579 /* PetShopViewModel.m in Sources */,
 				7E54D3D21CBE7F520044F545 /* BTLCommitInfo.m in Sources */,
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
+				7E0402BF1CC60512002AB801 /* registerViewController.m in Sources */,
 				7EC3E9E21CC0D0CA00DF4579 /* ShopSuggestCell.m in Sources */,
 				7E54D3BD1CBE7F520044F545 /* BTLHelpMeMakingOfferData.m in Sources */,
 				7E54D3EA1CBE7F520044F545 /* WXPaySDKData.m in Sources */,
@@ -1452,6 +1543,7 @@
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				7E54D3D61CBE7F520044F545 /* BTLShopCarData.m in Sources */,
 				7E54D3B91CBE7F520044F545 /* BTLBuildOrderInfo.m in Sources */,
+				7E0402C51CC6098A002AB801 /* shopAllViewCell.m in Sources */,
 				7E54D3E41CBE7F520044F545 /* UMMessageInfo.m in Sources */,
 				7EC3E9EF1CC0EA1D00DF4579 /* ShopController.m in Sources */,
 				7EC1BA3C1CBE269B00C51A6F /* MJPhotoLoadingView.m in Sources */,
@@ -1471,10 +1563,11 @@
 				7E54D3C91CBE7F520044F545 /* BTLOrderPay.m in Sources */,
 				7E54D3CA1CBE7F520044F545 /* BTLPayData.m in Sources */,
 				7E54D3E91CBE7F520044F545 /* WXPaySDK.m in Sources */,
-				7EC3E9DF1CC0D03500DF4579 /* ShopTableViewController.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				7E54D3CB1CBE7F520044F545 /* BTLResult.m in Sources */,
+				7ED529DA1CC5080800C666CF /* MeViewCell.m in Sources */,
 				7E54D3DC1CBE7F520044F545 /* ReceiveInfo.m in Sources */,
+				7E0402C81CC617E7002AB801 /* shoppingViewController.m in Sources */,
 				7E54D3BA1CBE7F520044F545 /* BTLExitLogin.m in Sources */,
 				7E54D3D01CBE7F520044F545 /* BTLReturnPwd.m in Sources */,
 				7E54D3C51CBE7F520044F545 /* BTLOrderListData.m in Sources */,
@@ -1485,6 +1578,7 @@
 				7E54D3D91CBE7F520044F545 /* deleteInfo.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
+				7ED529E21CC50E6700C666CF /* Factory.m in Sources */,
 				7E54D3D81CBE7F520044F545 /* deleteData.m in Sources */,
 				7E54D3B81CBE7F520044F545 /* BTLBuildOrderDatas.m in Sources */,
 				7E54D3EB1CBE7F520044F545 /* BTLConfirmOrderData.m in Sources */,
@@ -1498,17 +1592,19 @@
 				7EA25A251CBBB5FD0011A045 /* PetSuggestController.m in Sources */,
 				7E95964F1CBF8BEE005B46B3 /* PetChannelViewModel.m in Sources */,
 				7E3EAE2E1CBCDC68000D2194 /* SuggestTwoTableViewCell.m in Sources */,
+				7E0402E41CC66174002AB801 /* shopDetailViewController.m in Sources */,
+				7ED529CF1CC4C97C00C666CF /* UIView+Extension.m in Sources */,
 				7E54D3D41CBE7F520044F545 /* BTLPirmeData.m in Sources */,
 				7E54D3E01CBE7F520044F545 /* ShopMoneyInfo.m in Sources */,
-				7E54D31E1CBE75400044F545 /* TestViewController.m in Sources */,
+				7ED529CC1CC4C95000C666CF /* WelcomeViewController.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				7E54D3DF1CBE7F520044F545 /* ShopMoneyData.m in Sources */,
 				7E54D3C21CBE7F520044F545 /* BTLMineOrder.m in Sources */,
 				7E54D3D11CBE7F520044F545 /* BTLCommitData.m in Sources */,
+				7ED5299B1CC4882200C666CF /* makeOwnCell.m in Sources */,
 				7E3EAE281CBCDC19000D2194 /* SuggestOneTableViewCell.m in Sources */,
 				7EC1BA3D1CBE269B00C51A6F /* MJPhotoProgressView.m in Sources */,
 				7E54D3C71CBE7F520044F545 /* BTLOrderData.m in Sources */,
-				7EC3E9E61CC0D0FD00DF4579 /* ShopAllCell.m in Sources */,
 				7EC1BA391CBE269B00C51A6F /* MJPhoto.m in Sources */,
 				7E54D3E11CBE7F520044F545 /* UpDataShopData.m in Sources */,
 				7E54D3E51CBE7F520044F545 /* BTLInquiryData.m in Sources */,
@@ -1541,12 +1637,14 @@
 				7E54D3ED1CBE7F520044F545 /* BTLRegister.m in Sources */,
 				7E9596431CBF3806005B46B3 /* PetPicController.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
+				7ED529DE1CC50DD800C666CF /* LoveDetailViewController.m in Sources */,
 				7E54D3DE1CBE7F520044F545 /* ReturnFreightInfo.m in Sources */,
 				7E54D3CC1CBE7F520044F545 /* PayResult.m in Sources */,
 				7E54D31B1CBE73280044F545 /* TabViewController.m in Sources */,
 				7E54D3CE1CBE7F520044F545 /* BTLReceiptdetail.m in Sources */,
 				7E54D3DB1CBE7F520044F545 /* ReceiveDataInfo.m in Sources */,
 				7E54D3BE1CBE7F520044F545 /* BTLHelpMeMakingOfferInfo.m in Sources */,
+				7E0402D11CC62CFB002AB801 /* MedetilViewController.m in Sources */,
 				7E54D3F61CBE8ADD0044F545 /* PetPicViewModel.m in Sources */,
 				7EC1BA281CBE1B6700C51A6F /* ZanCell.m in Sources */,
 			);
@@ -1666,6 +1764,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BaseProject/Vendor/umeng_ios_social_sdk_4.2-2.5_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1693,6 +1792,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BaseProject/Vendor/umeng_ios_social_sdk_4.2-2.5_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",

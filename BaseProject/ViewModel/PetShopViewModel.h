@@ -11,6 +11,7 @@
 @interface PetShopViewModel : BaseViewModel
 @property(nonatomic,assign)NSInteger pageId;
 //行数
+@property(nonatomic,assign)BOOL flag;
 @property(nonatomic,strong)NSArray *ZuiXinArr;
 
 @property(nonatomic,assign)NSInteger rowNumber;

@@ -78,6 +78,7 @@
 - (UIScrollView *)scrollView{
     if (!_scrollView) {
         _scrollView = [UIScrollView new];
+
         NSArray *arr=@[@"推荐",@"频道",@"排名"];
         UIView *lastView=nil; //指向最新添加的按钮
         for (int i= 0; i< arr.count; i++) {
@@ -173,7 +174,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+//    self.scrollView.backgroundColor = YCColor(247, 76, 83);
+    [self.navigationController.navigationBar setBackgroundColor:YCColor(247, 76, 83)];
     // Do any additional setup after loading the view.
     [self addChildViewController:self.sdVC];
     [self.view addSubview:self.sdVC.view];

@@ -28,12 +28,14 @@
             [self.tableView reloadData];
         }];
     }];
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    if (self.PetChanVM.flag) {
+        self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self.PetChanVM getMoreDataCompletionHandle:^(NSError *error) {
             [self.tableView.footer endRefreshing];
             [self.tableView reloadData];
         }];
     }];
+    }
     [self.tableView.header beginRefreshing];
    
 }
@@ -65,7 +67,9 @@ kRemoveCellSeparator
     
     return nil;
 }
-
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 - (PetChannelViewModel *)PetChanVM {
 	if(_PetChanVM == nil) {
 		_PetChanVM = [[PetChannelViewModel alloc] init];

@@ -8,9 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "PetShopViewModel.h"
+
+@class ShopSuggestCell;
+@protocol shopSuggestCellDelegate <NSObject>
+
+-(void)gotoDetailGoods :(ShopSuggestCell *)cell url :(id)url;
+
+@end
+
 @interface ShopSuggestCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionVeiw;
 @property(nonatomic,strong)NSArray *phtot;
-@property(nonatomic,strong)PetShopViewModel *shopVm;
+@property(nonatomic, weak) id<shopSuggestCellDelegate> delegate;
+-(void)dealWithDataCell1 : (PetShopViewModel *)PetVM row : (NSInteger)row;
+
 @property(nonatomic,assign)NSInteger phtotCount;
 @end
