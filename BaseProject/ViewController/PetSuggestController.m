@@ -11,17 +11,22 @@
 #import "SuggestOneTableViewCell.h"
 #import "SuggestTwoTableViewCell.h"
 #import "PetSuggestZanController.h"
-@interface PetSuggestController ()
+#import "UMSocial.h"
+@interface PetSuggestController ()<UMSocialUIDelegate,UMSocialDataDelegate>
 @property(nonatomic,strong)AllPetsNewsViewModel *PetVM;
+@property(nonatomic,assign)NSInteger clickRow;
+
 @end
 
 @implementation PetSuggestController
+
 - (AllPetsNewsViewModel *)PetVM {
     if(_PetVM == nil) {
         _PetVM = [[AllPetsNewsViewModel alloc] init];
     }
     return _PetVM;
 }
+
 - (IBAction)gotoZanVc:(id)sender {
     PetSuggestZanController *zanVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ZanVc"];
     zanVc.ZanDataArr = self.PetVM.PhotoZanArr;
@@ -29,6 +34,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.tabBarController.hidesBottomBarWhenPushed = YES;
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.PetVM refreshDataCompletionHandle:^(NSError *error) {
@@ -45,6 +52,13 @@
     [self.tableView.header beginRefreshing];
 
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    self.tableView.frame = CGRectMake(0, 44, kWindowW, kWindowH - 44);
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.contentInset = UIEdgeInsetsMake(60, 0, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,21 +85,66 @@ kRemoveCellSeparator
     
     if ([self.PetVM isOnePhotoForRow:row]) {  //一张图片就加载cell1
        cell1 = [tableView dequeueReusableCellWithIdentifier:cell1Id forIndexPath:indexPath];
-
+        UILabel *shareLb =  [cell1 viewWithTag:500];
+        UIImageView  *image =  [cell1 viewWithTag:400];
+        image.userInteractionEnabled = YES;
+        shareLb.userInteractionEnabled = YES;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(share:)];
+        [shareLb addGestureRecognizer:gesture];
+        [image addGestureRecognizer:gesture];
         [cell1 dealWithData :self.PetVM row:row];
-       
+       self.clickRow = row;
         return cell1;
     }else{        //不是一张图片就加载cell2
         
         cell2 = [tableView dequeueReusableCellWithIdentifier:cell2Id forIndexPath:indexPath];
-        
+        UILabel *shareLb =  [cell2 viewWithTag:500];
+        UIImageView  *image =  [cell2 viewWithTag:400];
+        image.userInteractionEnabled = YES;
+
+        shareLb.userInteractionEnabled = YES;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(share:)];
+        [shareLb addGestureRecognizer:gesture];
         [cell2 dealWithData :self.PetVM row:row];
-        
+        [image addGestureRecognizer:gesture];
+        self.clickRow = row;
        return cell2;
     }
     
    
     return nil;
+}
+-(void)share :(UIGestureRecognizer *)gesture {
+    NSString *shareUrl =   [self.PetVM getUserppidForRow:_clickRow];
+    
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = [NSString stringWithFormat:@"http://m.gutou.com/v3/photo.html?do=index&ppid=%@", shareUrl];
+    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"微信好友";
+   NSString *url =  [self.PetVM getPetPhotoStrForRow:_clickRow];
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"572ab2be67e58ea55800000d"
+                                      shareText:[self.PetVM getDecriptionForRow:_clickRow]
+                                     shareImage:[UIImage imageNamed:url]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatSession,nil]
+                                       delegate:self];
+    
+//    UMSocialUrlResource *urlResource = [[UMSocialUrlResource alloc] initWithSnsResourceType:UMSocialUrlResourceTypeImage url:url
+//                                       ];
+//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToSina,UMShareToWechatSession] content:[self.PetVM getDecriptionForRow:_clickRow] image:nil location:nil urlResource:urlResource presentedController:self completion:^(UMSocialResponseEntity *shareResponse){
+//        if (shareResponse.responseCode == UMSResponseCodeSuccess) {
+//            NSLog(@"分享成功！");
+//        }
+//    }];
+
+}
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的微博平台名
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
    if ([self.PetVM isOnePhotoForRow:indexPath.section]) {

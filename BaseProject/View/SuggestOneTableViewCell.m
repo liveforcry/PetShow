@@ -8,6 +8,7 @@
 
 #import "SuggestOneTableViewCell.h"
 #import "PetSuggestZanController.h"
+#import "UMSocial.h"
 @interface SuggestOneTableViewCell()
 @property(nonatomic,strong)NSURL *PhtotURL;
 @end

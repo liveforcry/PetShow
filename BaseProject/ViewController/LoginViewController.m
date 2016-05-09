@@ -5,9 +5,10 @@
 //  Created by baturu on 16/4/19.
 //  Copyright © 2016年 shenyi. All rights reserved.
 //
-
+#import <BmobSDK/Bmob.h>
 #import "LoginViewController.h"
 #import "MedetilViewController.h"
+#import "UMSocial.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -18,68 +19,91 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+//微博登入
+- (IBAction)weiboLogin:(id)sender {
+    
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
+            
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
+            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+        }});
+    
+}
+//微信登入
+- (IBAction)weixinLogin:(id)sender {
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];
+            
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
+              [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+        }
+        
+    });
+}
+- (IBAction)renrenLogin:(id)sender {
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToRenren];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
+            
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
+             [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+        }});
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)login:(id)sender {
-    NSString *name = self.nameTextField.text;
-    NSString *password = self.passwordTextField.text;
-[self loginBtnDidClick:name pwd:password];
+//    NSString *name = self.nameTextField.text;
+//    NSString *password = self.passwordTextField.text;
+////[self loginBtnDidClick:name pwd:password];
 //    [self loginBtnDidClick:@"15077833411" pwd:@"111111a"];
-}
-
-- (IBAction)gotoRegiester:(id)sender {
-    
-}
-
-- (void)loginBtnDidClick:(NSString *)name pwd:(NSString *)pwd {
-    //    [SVProgressHUD showWithStatus:@"正在登录..."];
-    //    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
-    
-    NSString *url = [NSString stringWithFormat:@"http://mobileapi.qipeipu.com/mobileapi/bs/userlg/login?account=%@&pwd=%@",  name, pwd];
-    // 过滤到用户密码为空的情况
-    if(name.length == 0 || pwd.length == 0)
-    {
-        NSString *str = @"用户名或密码为空, 请重新输入";
-        [self useAlertWithMsg:str];
+    if ([self.nameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""]) {
+        UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"登录失败" message:@"用户名和密码不能为空！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alter show];
         return;
     }
-    
-    [BTLAllHttpTool loginWithUrl:url
-                           Param:nil
-                         success:^(BTLLoginResponse *response) {
-                             //                response:  {"state":"0","name":"城","tel":"15077833411","cactMan":"张敏1","cactTel":"13802500397","countyId":"1674"} 新增了一个userId属性
-                             
-                             NSLog(@"%@, %@", response.msg, response.state);
-                             
-                             [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"RegisterSignupFlag"];
-                             
-                             //
-                             NSLog(@"msg %@", response.msg);
-                             
-                             if ([response.state isEqualToString:@"0"]) {
-                                 
-                                 [self.navigationController pushViewController:[[MedetilViewController alloc] init] animated:YES];
-                                 
-                                 
-                             } else{
-                                 NSLog(@"账号密码问题 %@ ", response.msg);
-                                 NSString *msg = response.msg;
-                                 if (msg.length == 0 || msg.length > 50) {
-                                     msg = @"网络问题，请稍后再试";
-                                 }
-                                 [self useAlertWithMsg:msg];
-                                 
-                             }
-                         } failure:^(NSError *error) {
-                             NSLog(@"登录失败 %@",error);
-                             
-                             NSString *str = @"网络问题，请稍后再试";
-                             [self useAlertWithMsg:str];
-                             
-                         }];
+   
+    [BmobUser loginWithUsernameInBackground:self.nameTextField.text password:self.
+     passwordTextField.text block:^(BmobUser *user, NSError *error) {
+        if (error) {
+        
+            UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"登录失败" message:@"请输入正确的用户名和密码！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alter show];
+        }else{
+            NSLog(@"登录成功");
+            //登录成功后
+//            YJLoginUserViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"userVC"];
+//            [self.navigationController pushViewController:vc animated:YES];
+            
+            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:self.nameTextField.text] animated:YES];
+        }
+    }];
+
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 
 
@@ -95,15 +119,5 @@
 }
 
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

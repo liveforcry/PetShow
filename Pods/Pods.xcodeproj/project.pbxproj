@@ -311,6 +311,8 @@
 		7C7C4158317443D9EC143D4B4B1B502F /* UISlider+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B1705DB587420E14113892DFB93DB5A4 /* UISlider+FlatUI.m */; };
 		7D2D914EEDBCFF0F225F680F75D5694E /* NSObject+BKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A91800D56726E137A8443AEFCFBB76 /* NSObject+BKAssociatedObjects.m */; };
 		7D3B3786F1D6CED2CE141B2B1BDAE012 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D65540D7A8650EAF0E4F8E0351B143 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7E4C93011CC792AA00C4D369 /* Bmob_iOS_SDK更新历史.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7E4C92FF1CC792A900C4D369 /* Bmob_iOS_SDK更新历史.txt */; };
+		7E4C93021CC792AA00C4D369 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4C93001CC792A900C4D369 /* BmobSDK.framework */; };
 		7E8DF508233A1A7A663933939A6D5FE8 /* MFMessageComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A89FE25AFBD888D65FDE3135FBEE1B0D /* MFMessageComposeViewController+BlocksKit.m */; };
 		7F655B1B71434E3A5BD306E122F6E430 /* ASDisplayNode+AsyncDisplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13EAFA72CC353F45C5ECA8004D54A65B /* ASDisplayNode+AsyncDisplay.mm */; };
 		7FF0D746227F4936289927C5CEFEE935 /* FUITextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 873D8208707FEB032DC3DB52367FA3D5 /* FUITextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1170,6 +1172,8 @@
 		7CDE9052C28F0C679F1880E999099F9D /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
 		7DECA88918163CE0A17BCB718C9B8BD5 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		7E17B34DE705AF89EF0D0B40B3A49680 /* _ASHierarchyChangeSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASHierarchyChangeSet.h; path = AsyncDisplayKit/Private/_ASHierarchyChangeSet.h; sourceTree = "<group>"; };
+		7E4C92FF1CC792A900C4D369 /* Bmob_iOS_SDK更新历史.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Bmob_iOS_SDK更新历史.txt"; sourceTree = "<group>"; };
+		7E4C93001CC792A900C4D369 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		7EEC8A166818853C67F23F783EEA882C /* NSObject+BKBlockExecution.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+BKBlockExecution.h"; path = "BlocksKit/Core/NSObject+BKBlockExecution.h"; sourceTree = "<group>"; };
 		7EFDF9C127FB29FE0AB9A23B9A2BD2DA /* ASRelativeSize.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASRelativeSize.mm; path = AsyncDisplayKit/Layout/ASRelativeSize.mm; sourceTree = "<group>"; };
 		7F99AF4D6585E07F38B2C621542B4D65 /* UIFont+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FlatUI.m"; path = "Classes/ios/UIFont+FlatUI.m"; sourceTree = "<group>"; };
@@ -1679,6 +1683,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4C93021CC792AA00C4D369 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2231,6 +2236,7 @@
 		72873E3EFB8E8C0FD637854CD2CAAA88 /* DACircularProgress */ = {
 			isa = PBXGroup;
 			children = (
+				7E4C92FE1CC792A900C4D369 /* Bmob_SDK_iOS_v1.6.6 */,
 				60A05518C67E7E74F73EBAD0B9AD50B1 /* DACircularProgressView.h */,
 				0507B39238491D22050C256E617AEE10 /* DACircularProgressView.m */,
 				1FED71940F186C1B055AAC871E1F847E /* DALabeledCircularProgressView.h */,
@@ -2316,6 +2322,15 @@
 				463C0A4999228018570FC7405601CA66 /* Products */,
 				5534194C9B69E7B5CA15CDEB1EA01697 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7E4C92FE1CC792A900C4D369 /* Bmob_SDK_iOS_v1.6.6 */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C92FF1CC792A900C4D369 /* Bmob_iOS_SDK更新历史.txt */,
+				7E4C93001CC792A900C4D369 /* BmobSDK.framework */,
+			);
+			path = Bmob_SDK_iOS_v1.6.6;
 			sourceTree = "<group>";
 		};
 		812BD782BD34D35D65BE11FE9EDBB37D /* Support Files */ = {
@@ -3869,6 +3884,7 @@
 				5C1EA3A4B2D74A23245225A2DEB0C35F /* ImageSelectedSmallOff@2x.png in Resources */,
 				12EDA57341C456632A6291D58D966BD6 /* ImageSelectedSmallOff@3x.png in Resources */,
 				54B79A8FA7CDA1ABFD60BA1D5DDED418 /* ImageSelectedSmallOn.png in Resources */,
+				7E4C93011CC792AA00C4D369 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				AEE26E40C45DB6A4D13E084331742770 /* ImageSelectedSmallOn@2x.png in Resources */,
 				D761EE9B5D106050E75596579B4F9313 /* ImageSelectedSmallOn@3x.png in Resources */,
 				E93ED599FDA455D7FC17F25DBD3FA084 /* PlayButtonOverlayLarge.png in Resources */,
@@ -4774,6 +4790,11 @@
 			baseConfigurationReference = 170DE4C9688405FBE7D76388FEF4B741 /* MWPhotoBrowser.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DACircularProgress/Bmob_SDK_iOS_v1.6.6",
+					"$(PROJECT_DIR)/CocoaAsyncSocket/Bmob_SDK_iOS_v1.6.9",
+				);
 				PRODUCT_NAME = MWPhotoBrowser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -5076,6 +5097,11 @@
 			baseConfigurationReference = 170DE4C9688405FBE7D76388FEF4B741 /* MWPhotoBrowser.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DACircularProgress/Bmob_SDK_iOS_v1.6.6",
+					"$(PROJECT_DIR)/CocoaAsyncSocket/Bmob_SDK_iOS_v1.6.9",
+				);
 				PRODUCT_NAME = MWPhotoBrowser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

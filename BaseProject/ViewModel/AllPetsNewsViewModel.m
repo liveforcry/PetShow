@@ -80,6 +80,12 @@
 -(NSURL *)getPetPhotoUrlForRow :(NSInteger)row{
    return  [NSURL URLWithString:[self getDataListForRow:row].photo[0].url];
 }
+-(NSString *)getPetPhotoStrForRow :(NSInteger)row{
+    return [self getDataListForRow:row].photo[0].url;
+}
+-(NSString *)getUserppidForRow :(NSInteger)row{
+     return  [self getDataListForRow:row].ppid;
+}
 -(NSString *)getDecriptionForRow :(NSInteger)row{
         return  [self getDataListForRow:row].photo_des;
 }

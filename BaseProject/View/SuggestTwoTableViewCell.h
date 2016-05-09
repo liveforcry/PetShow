@@ -34,4 +34,5 @@
 @property(nonatomic,strong)NSArray *phtot;
 @property(nonatomic,strong)NSArray *phtotZan;
 
+
 @end

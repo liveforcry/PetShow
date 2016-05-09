@@ -29,8 +29,9 @@
 -(NSString *)getUserTitleForRow :(NSInteger)row;
 //用户的地址
 -(NSString *)getUserAddressForRow :(NSInteger)row;
-////用户的性别
-//-(NSString *)getUserGenderForRow :(NSInteger)row;
+
+-(NSString *)getUserppidForRow :(NSInteger)row;
+-(NSString *)getPetPhotoStrForRow :(NSInteger)row;
 //用户的等级
 -(NSURL *)getUserLevelForRow :(NSInteger)row;
 ////宠物的类名

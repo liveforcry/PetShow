@@ -8,6 +8,7 @@
 
 #import "MedetilViewController.h"
 //#import "Factory.h"
+#import "LoginViewController.h"
 #define kScreenWith [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #import "LoveDetailViewController.h"
@@ -26,6 +27,7 @@ const CGFloat kStatusBarHeight = 20;
 @property (nonatomic, strong) UIImageView *icon;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, assign) CGFloat scale;
+@property(nonatomic,assign)NSString *name;
 @end
 
 @implementation MedetilViewController
@@ -33,6 +35,12 @@ const CGFloat kStatusBarHeight = 20;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(instancetype)initWithName: (NSString *)name{
+    if (self = [super init]) {
+        self.name = name;
+    }
+    return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,7 +72,7 @@ const CGFloat kStatusBarHeight = 20;
     UIImageView *headerImageView = [[UIImageView alloc] init];
     headerImageView.bounds = bounds;
     headerImageView.center = contentView.center;
-    headerImageView.image = [UIImage imageNamed:@"xg"];
+    headerImageView.image = [UIImage imageNamed:@"bg+"];
     contentView.layer.masksToBounds = YES;
     
     self.headerImageView = headerImageView;
@@ -85,8 +93,9 @@ const CGFloat kStatusBarHeight = 20;
     self.icon = icon;
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(108, self.headerContentView.bounds.size.height-60-12, kScreenWith-108-12, 50)];
-    label.text = @"这羡慕你们这些人, 年纪轻轻的就认识了才华横溢的我!";
-    label.textColor = [UIColor whiteColor];
+    label.text = self.name;
+    
+    label.textColor = [UIColor purpleColor];
     label.font = [UIFont systemFontOfSize:15];
     label.numberOfLines = 0;
     self.label = label;
@@ -180,12 +189,12 @@ const CGFloat kStatusBarHeight = 20;
             label.text = @"我的帖子";
         }else{
             image.image = [UIImage imageNamed:@"adopt_origin_icon"];
-            label.text = @"我的收藏";
+            label.text = @"设置";
         }
     }
     if (indexPath.section == 2) {
         image.image = [UIImage imageNamed:@"activity_offline_icon"];
-        label.text = @"设置";
+        label.text = @"退出账号";
     }
     return cell;
 }
@@ -208,6 +217,10 @@ const CGFloat kStatusBarHeight = 20;
     if (indexPath.section == 1 && indexPath.row == 3) {
         LoveDetailViewController *loveVc = [[LoveDetailViewController alloc]initWithURL:[NSURL URLWithString:@"http://www.yc.cn/app/commonweal/index.html?petTitle=%E5%88%86%E4%BA%AB&petCallback=petHtmlShare&petVer=220&petPlat=1&sessionKey=f035917ca9419f17000064c8ac0c92fd"]];
         [self.navigationController pushViewController:loveVc animated:YES];
+    }
+    if (indexPath.section == 2) {
+        LoginViewController *loginVc = [kStoryboard(@"Main") instantiateViewControllerWithIdentifier:@"loginVc"];
+        [self.navigationController pushViewController:loginVc animated:YES];
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
