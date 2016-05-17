@@ -22,7 +22,8 @@
 @property(nonatomic,strong)NSArray *PhotoZanArr;
 //赞了用户几张
 @property(nonatomic,assign)NSInteger PhtotZanCount;
-
+//设置标示为判断是否有赞此说说
+@property(nonatomic,assign)BOOL hasZan;
 //用户的头像url
 -(NSURL *)getUsersUrlForRow : (NSInteger)row;
 //用户的标题
@@ -50,6 +51,8 @@
 -(NSString *)getLikeNumForRow :(NSInteger)row;
 //评论的数量
 -(NSString *)getCommentNumForRow :(NSInteger)row;
+//获取赞的用户的数组
+- (NSArray *)GetPhotoZanArrFroRow :(NSInteger) row;
 
 
 @end

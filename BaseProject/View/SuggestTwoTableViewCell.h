@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *PetCollectinView;
 
+@property (weak, nonatomic) IBOutlet UIButton *detailZanUserBtn;
 @property (weak, nonatomic) IBOutlet UILabel *petDescLb;
 
 -(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row;

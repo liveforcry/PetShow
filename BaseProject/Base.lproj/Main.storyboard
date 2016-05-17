@@ -217,6 +217,7 @@
                                 <connections>
                                     <outlet property="PetPhotoConstraint" destination="dAA-B5-kYc" id="Il7-go-beP"/>
                                     <outlet property="commNumLb" destination="6uV-6I-41G" id="XSp-VK-HWM"/>
+                                    <outlet property="detailZanUserBtn" destination="FQ7-GW-D4c" id="5Q6-IA-nJ3"/>
                                     <outlet property="likeNumLb" destination="wyQ-gl-T5n" id="Ivw-2c-4pi"/>
                                     <outlet property="petDescLb" destination="ZUL-gW-BMb" id="etS-tz-IXx"/>
                                     <outlet property="petPhotoImg" destination="Vov-mk-32P" id="nlE-fq-bQT"/>
@@ -294,7 +295,6 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEV-2t-Jah">
                                                     <rect key="frame" x="0.0" y="0.0" width="357" height="40"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="gotoZanVc:" destination="Lg1-pH-hRw" eventType="touchUpInside" id="GNy-xk-ZcW"/>
                                                     </connections>
@@ -307,7 +307,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="NU2-ZY-f7o" firstAttribute="leading" secondItem="qBH-Qx-xoq" secondAttribute="leading" constant="10" id="FBp-5t-oln"/>
                                                 <constraint firstAttribute="height" constant="40" id="IOm-Z6-nUX"/>
@@ -445,6 +445,7 @@
                                 <connections>
                                     <outlet property="PetCollectinView" destination="DdN-mm-L0Y" id="5H5-ai-pYu"/>
                                     <outlet property="commNumLb" destination="wsS-gY-g8m" id="RB6-Dx-pPY"/>
+                                    <outlet property="detailZanUserBtn" destination="TEV-2t-Jah" id="DMe-eK-KHQ"/>
                                     <outlet property="likeNumLb" destination="NEe-Sx-HfU" id="dxE-aN-UJD"/>
                                     <outlet property="petDescLb" destination="eXz-IC-vao" id="kSR-HV-Xyz"/>
                                     <outlet property="userAddressLb" destination="Ddk-ih-6Qr" id="gkF-eS-Wnd"/>

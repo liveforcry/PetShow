@@ -27,7 +27,8 @@ const CGFloat kStatusBarHeight = 20;
 @property (nonatomic, strong) UIImageView *icon;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, assign) CGFloat scale;
-@property(nonatomic,assign)NSString *name;
+@property(nonatomic,strong)NSString *name;
+@property(nonatomic,strong)NSString *iconUrl;
 @end
 
 @implementation MedetilViewController
@@ -36,9 +37,10 @@ const CGFloat kStatusBarHeight = 20;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(instancetype)initWithName: (NSString *)name{
+-(instancetype)initWithName: (NSString *)name icon : (NSString *)icon{
     if (self = [super init]) {
         self.name = name;
+        self.iconUrl = icon;
     }
     return self;
 }
@@ -72,7 +74,11 @@ const CGFloat kStatusBarHeight = 20;
     UIImageView *headerImageView = [[UIImageView alloc] init];
     headerImageView.bounds = bounds;
     headerImageView.center = contentView.center;
+//    if (_iconUrl) {
+//        [headerImageView setImageWithURL:[NSURL URLWithString:_iconUrl] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+//    }else{
     headerImageView.image = [UIImage imageNamed:@"bg+"];
+//    }
     contentView.layer.masksToBounds = YES;
     
     self.headerImageView = headerImageView;
@@ -84,7 +90,12 @@ const CGFloat kStatusBarHeight = 20;
     CGRect icon_frame = CGRectMake(12, self.headerContentView.bounds.size.height-80-12, 80, 80);
     UIImageView *icon = [[UIImageView alloc] initWithFrame:icon_frame];
     icon.backgroundColor = [UIColor clearColor];
-    icon.image = [UIImage imageNamed:@"AppIcon57x57"];
+    if (_iconUrl) {
+        [icon setImageWithURL:[NSURL URLWithString:_iconUrl] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
+    }else{
+        icon.image = [UIImage imageNamed:@"AppIcon57x57"];
+
+    }
     icon.layer.cornerRadius = 80/2.0f;
     icon.layer.masksToBounds = YES;
     icon.layer.borderWidth = 1.0f;

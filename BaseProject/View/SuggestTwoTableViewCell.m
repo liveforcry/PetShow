@@ -30,6 +30,7 @@
 }
 -(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row{
     self.phtot = PetVM.PhotoArr;
+    self.detailZanUserBtn.tag = row;
     self.phtotZan = PetVM.PhotoZanArr;
     [self.userPhotoImg setImageWithURL:[PetVM getUsersUrlForRow:row] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_3"]];
     self.userNameLb.text = [PetVM getUserTitleForRow:row];
@@ -68,6 +69,7 @@
         _ZanNumber = count - 1;
     }
     if (_ZanNumber) {
+     
         for (int i  = 0; i < _ZanNumber; i++) {
             if (i == 0) {
                 lastView = _userZanImg;

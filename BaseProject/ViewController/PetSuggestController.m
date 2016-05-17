@@ -12,7 +12,7 @@
 #import "SuggestTwoTableViewCell.h"
 #import "PetSuggestZanController.h"
 #import "UMSocial.h"
-@interface PetSuggestController ()<UMSocialUIDelegate,UMSocialDataDelegate>
+@interface PetSuggestController ()<UMSocialUIDelegate>
 @property(nonatomic,strong)AllPetsNewsViewModel *PetVM;
 @property(nonatomic,assign)NSInteger clickRow;
 
@@ -27,10 +27,11 @@
     return _PetVM;
 }
 
-- (IBAction)gotoZanVc:(id)sender {
+- (IBAction)gotoZanVc:(UIButton *)sender {
     PetSuggestZanController *zanVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ZanVc"];
-    zanVc.ZanDataArr = self.PetVM.PhotoZanArr;
-    [self.navigationController pushViewController:zanVc animated:YES];
+      NSLog(@"sender.tag = %ld",sender.tag);
+    zanVc.ZanDataArr = [self.PetVM GetPhotoZanArrFroRow:sender.tag];
+    [self.navigationController pushViewController:zanVc animated:NO];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -128,13 +129,7 @@ kRemoveCellSeparator
                                 shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatSession,nil]
                                        delegate:self];
     
-//    UMSocialUrlResource *urlResource = [[UMSocialUrlResource alloc] initWithSnsResourceType:UMSocialUrlResourceTypeImage url:url
-//                                       ];
-//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToSina,UMShareToWechatSession] content:[self.PetVM getDecriptionForRow:_clickRow] image:nil location:nil urlResource:urlResource presentedController:self completion:^(UMSocialResponseEntity *shareResponse){
-//        if (shareResponse.responseCode == UMSResponseCodeSuccess) {
-//            NSLog(@"分享成功！");
-//        }
-//    }];
+
 
 }
 -(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
@@ -147,10 +142,14 @@ kRemoveCellSeparator
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
    if ([self.PetVM isOnePhotoForRow:indexPath.section]) {
-       return self.PetVM.height;
+       
+           return self.PetVM.height;
+
    }else{
-       return self.PetVM.height + 131 - kWindowW;
+      
+       return self.PetVM.height + 131 - kWindowW ;
    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{

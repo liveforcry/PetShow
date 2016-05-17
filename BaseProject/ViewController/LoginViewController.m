@@ -34,7 +34,7 @@
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
             
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
-            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName icon:snsAccount.iconURL]  animated:NO];
         }});
     
 }
@@ -49,7 +49,7 @@
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];
             
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
-              [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName icon:snsAccount.iconURL]  animated:NO];
         }
         
     });
@@ -66,7 +66,7 @@
             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
             
             NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId);
-             [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName] animated:NO];
+           [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:snsAccount.userName icon:snsAccount.iconURL]  animated:NO];
         }});
 }
 
@@ -97,7 +97,8 @@
 //            YJLoginUserViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"userVC"];
 //            [self.navigationController pushViewController:vc animated:YES];
             
-            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:self.nameTextField.text] animated:YES];
+//            [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:self.nameTextField.text] animated:YES];
+               [self.navigationController pushViewController:[[MedetilViewController alloc] initWithName:self.nameTextField.text icon:nil]  animated:NO];
         }
     }];
 

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MedetilViewController : UIViewController
--(instancetype)initWithName: (NSString *)name;
+-(instancetype)initWithName: (NSString *)name icon : (NSString *)icon;
 @end

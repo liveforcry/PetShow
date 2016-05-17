@@ -19,6 +19,8 @@
     [super viewDidLoad];
     self.hidesBottomBarWhenPushed = YES;
     [self.tableView reloadData];
+    UIView *footView = [UIView new];
+    self.tableView.tableFooterView = footView;
   self.title = @"赞的人";
 }
 - (DataListZan_List *)getDataForRow: (NSInteger)row{
@@ -48,6 +50,7 @@
     return self.ZanDataArr.count;
 }
 
+kRemoveCellSeparator
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString  *cellIndenty = @"zanCell";

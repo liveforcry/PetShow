@@ -54,20 +54,22 @@
 -(NSString *)getUserAddressForRow :(NSInteger)row{
       return [self getDataListForRow:row].user_info.address;
 }
-//-(NSString *)getUserGenderForRow :(NSInteger)row{
-//    return [self getDataListForRow:row].user_info.nickname;
-//}
+
 -(NSURL *)getUserLevelForRow :(NSInteger)row{
     return [NSURL URLWithString:[self getDataListForRow:row].user_info.level_icon];
 }
 -(NSString *)getPetNameForRow :(NSInteger)row{
       return [self getDataListForRow:row].user_info.nickname;
 }
-
+- (NSArray *)GetPhotoZanArrFroRow :(NSInteger) row{
+  
+    return [self getDataListForRow:row].zan_list;
+}
 -(BOOL)isOnePhotoForRow :(NSInteger)row{
      _PhtotCount = [self getDataListForRow:row].photo.count;
     _PhotoZanArr = [self getDataListForRow:row].zan_list;
     _PhtotZanCount = _PhotoZanArr.count;
+
     _height = [self getDataListForRow:row].height;
     if (_PhtotCount == 1) {
         return YES;

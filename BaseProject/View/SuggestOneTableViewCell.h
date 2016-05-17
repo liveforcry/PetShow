@@ -27,8 +27,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *commNumLb;
 @property (weak, nonatomic) IBOutlet UIView *userZanView;
+@property (weak, nonatomic) IBOutlet UIButton *detailZanUserBtn;
 
 @property (weak, nonatomic) IBOutlet UIImageView *userZanIma;
+
 @property(nonatomic,strong)NSArray *phtotZan;
 -(void)dealWithData : (AllPetsNewsViewModel *)PetVM row : (NSInteger)row;
 @end
